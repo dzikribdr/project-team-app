@@ -22,3 +22,12 @@ class _AdminMainScreenState extends State<AdminMainScreen> {
     const AdminOrdersScreen(),
     const AdminUsersScreen(),
   ];
+
+  void _logout() async {
+    await Supabase.instance.client.auth.signOut();
+    if (!mounted) return;
+    Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute(builder: (_) => const LoginScreen()),
+      (route) => false,
+    );
+  }
