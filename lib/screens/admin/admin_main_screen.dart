@@ -13,3 +13,12 @@ class AdminMainScreen extends StatefulWidget {
   @override
   State<AdminMainScreen> createState() => _AdminMainScreenState();
 }
+
+class _AdminMainScreenState extends State<AdminMainScreen> {
+  int _selectedIndex = 0;
+  
+  final List<Widget> _pages = [
+    const AdminProductsScreen(),
+    const AdminOrdersScreen(),
+    const AdminUsersScreen(),
+  ];
