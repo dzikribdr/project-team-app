@@ -81,3 +81,16 @@ Future<void> initialize() async {
         );
       }
     });
+
+    // 6. Cek Token FCM & AUTO COPY
+    final fcmToken = await _firebaseMessaging.getToken();
+    print('FCM Token Anda: $fcmToken');
+
+    // --- BAGIAN INI YANG MENYALIN OTOMATIS ---
+    if (fcmToken != null) { 
+      await Clipboard.setData(ClipboardData(text: fcmToken));
+      print("📋 SUKSES! Token sudah dicopy ke Clipboard HP Anda.");
+      print("   (Silakan langsung 'Paste' di website Firebase)");
+    }
+  }
+}
