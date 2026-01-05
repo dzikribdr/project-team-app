@@ -166,3 +166,16 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       size: 60,
                       color: AppConstants.cyanColor,
                     ),
+
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: AppConstants.cardBgColor,
+                    labelStyle: TextStyle(color: Colors.grey),
+                  ),
+                  validator: (val) {
+                    if (val != _passwordController.text)
+                      return 'Password tidak sama';
+                    return null;
+                  },
+                ),
+                const SizedBox(height: 24),
