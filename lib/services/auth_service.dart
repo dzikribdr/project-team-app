@@ -46,3 +46,12 @@ class AuthService {
     }
   
   }
+
+   // Logout
+  Future<void> signOut() async {
+    await _supabase.auth.signOut();
+  }
+
+  User? get currentUser => _supabase.auth.currentUser;
+  Session? get currentSession => _supabase.auth.currentSession;
+}
