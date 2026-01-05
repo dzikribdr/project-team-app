@@ -63,3 +63,21 @@ Future<void> initialize() async {
       
       RemoteNotification? notification = message.notification;
       AndroidNotification? android = message.notification?.android;
+
+      // Tampilkan notifikasi lokal jika ada datanya
+      if (notification != null && android != null) {
+        _localNotifications.show(
+          notification.hashCode,
+          notification.title,
+          notification.body,
+          NotificationDetails(
+            android: AndroidNotificationDetails(
+              channel.id,
+              channel.name,
+              channelDescription: channel.description,
+              icon: android.smallIcon,
+            ),
+          ),
+        );
+      }
+    });
