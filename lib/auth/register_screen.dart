@@ -99,3 +99,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                 ),
                 const SizedBox(height: 32),
+
+                
+                TextFormField(
+                  controller: _nameController,
+                  style: const TextStyle(color: Colors.white),
+                  decoration: const InputDecoration(
+                    labelText: 'Nama Lengkap',
+                    prefixIcon: Icon(Icons.person, color: Colors.grey),
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: AppConstants.cardBgColor,
+                    labelStyle: TextStyle(color: Colors.grey),
+                  ),
+                  validator: (val) =>
+                      (val == null || val.isEmpty) ? 'Nama wajib diisi' : null,
+                ),
+                const SizedBox(height: 16),
