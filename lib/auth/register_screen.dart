@@ -26,3 +26,21 @@ class _RegisterScreenState extends State<RegisterScreen> {
     if (!_formKey.currentState!.validate()) return;
 
     setState(() => _isLoading = true);
+
+    try {
+      // Panggil fungsi signUp yang baru kita buat
+      await _authService.signUp(
+        email: _emailController.text.trim(),
+        password: _passwordController.text.trim(),
+        fullName: _nameController.text.trim(),
+      );
+
+      if (!mounted) return;
+
+      // Sukses
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Registrasi Berhasil! Silakan Login."),
+          backgroundColor: Colors.green,
+        ),
+      );
