@@ -10,6 +10,7 @@ class Order {
     required this.status,
     required this.createdAt,
   });
+
   
   factory Order.fromJson(Map<String, dynamic> json) {
     return Order(
