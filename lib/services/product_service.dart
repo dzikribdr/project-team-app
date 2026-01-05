@@ -8,7 +8,8 @@ class ProductService {
     try {
       var query = _supabase
           .from('products')
-          .select();
+          .select()
+          .eq('is_deleted', false);
 
       if (categoryId != null && categoryId != 0) {
         query = query.eq('category_id', categoryId);
