@@ -89,3 +89,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   color: AppConstants.cyanColor,
                 ),
                 const SizedBox(height: 24),
+
+                Text(
+                  "Buat Akun Baru",
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 32),
