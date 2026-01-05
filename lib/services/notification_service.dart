@@ -56,3 +56,10 @@ Future<void> initialize() async {
     await _localNotifications
         .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
         ?.createNotificationChannel(channel);
+
+         // 5. Listener Pesan saat Foreground (Aplikasi sedang dibuka)
+    FirebaseMessaging.onMessage.listen((RemoteMessage message) {
+      print('Pesan diterima saat foreground: ${message.notification?.title}');
+      
+      RemoteNotification? notification = message.notification;
+      AndroidNotification? android = message.notification?.android;
