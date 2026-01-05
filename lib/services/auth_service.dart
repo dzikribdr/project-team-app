@@ -28,4 +28,21 @@ class AuthService {
       }, // Data ini akan masuk ke trigger SQL public.users
     );
   }
+
+  Future<String> getUserRole() async {
+    final user = _supabase.auth.currentUser;
+    if (user == null) return 'customer';
+
+    try {
+      final data = await _supabase
+          .from('users')
+          .select('role')
+          .eq('id', user.id)
+          .single();
+      
+      return data['role'] as String? ?? 'customer';
+    } catch (e) {
+      return 'customer'; 
+    }
   
+  }
