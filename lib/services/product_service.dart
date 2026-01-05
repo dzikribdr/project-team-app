@@ -1,6 +1,7 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:project_jasun/models/product_model.dart';
 
+
 class ProductService {
   final SupabaseClient _supabase = Supabase.instance.client;
 
