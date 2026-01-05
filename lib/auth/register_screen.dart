@@ -135,3 +135,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       : null,
                 ),
                 const SizedBox(height: 16),
+
+
+                TextFormField(
+                  controller: _passwordController,
+                  obscureText: true,
+                  style: const TextStyle(color: Colors.white),
+                  decoration: const InputDecoration(
+                    labelText: 'Password',
+                    prefixIcon: Icon(Icons.lock_outline, color: Colors.grey),
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: AppConstants.cardBgColor,
+                    labelStyle: TextStyle(color: Colors.grey),
+                  ),
+                  validator: (val) => (val != null && val.length < 6)
+                      ? 'Min. 6 karakter'
+                      : null,
+                ),
+                const SizedBox(height: 16),
