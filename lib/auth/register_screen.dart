@@ -154,3 +154,15 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       : null,
                 ),
                 const SizedBox(height: 16),
+
+                TextFormField(
+                  controller: _confirmPasswordController,
+                  obscureText: true,
+                  style: const TextStyle(color: Colors.white),
+                  decoration: const InputDecoration(
+                    labelText: 'Konfirmasi Password',
+                    prefixIcon: Icon(
+                      Icons.person_add,
+                      size: 60,
+                      color: AppConstants.cyanColor,
+                    ),
