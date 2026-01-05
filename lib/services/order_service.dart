@@ -12,7 +12,8 @@ class OrderService {
       final response = await _supabase
           .from('orders')
           .select()
-          .eq('user_id', user.id);
+          .eq('user_id', user.id)
+          .order('created_at', ascending: false);
 
       final data = response as List<dynamic>;
       return data.map((json) => Order.fromJson(json)).toList();
