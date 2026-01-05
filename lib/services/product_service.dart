@@ -15,7 +15,10 @@ class ProductService {
         query = query.eq('category_id', categoryId);
       }
 
-      final response = await query;
+      final response = await query.order(
+        'created_at',
+        ascending: false,
+      );
 
       final data = response as List<dynamic>;
       return data.map((json) => Product.fromJson(json)).toList();
