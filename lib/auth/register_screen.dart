@@ -116,3 +116,22 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       (val == null || val.isEmpty) ? 'Nama wajib diisi' : null,
                 ),
                 const SizedBox(height: 16),
+
+
+                TextFormField(
+                  controller: _emailController,
+                  keyboardType: TextInputType.emailAddress,
+                  style: const TextStyle(color: Colors.white),
+                  decoration: const InputDecoration(
+                    labelText: 'Email',
+                    prefixIcon: Icon(Icons.email_outlined, color: Colors.grey),
+                    border: OutlineInputBorder(),
+                    filled: true,
+                    fillColor: AppConstants.cardBgColor,
+                    labelStyle: TextStyle(color: Colors.grey),
+                  ),
+                  validator: (val) => (val == null || !val.contains('@'))
+                      ? 'Email tidak valid'
+                      : null,
+                ),
+                const SizedBox(height: 16),
