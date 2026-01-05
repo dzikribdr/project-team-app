@@ -12,3 +12,17 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
 class NotificationService {
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
   final FlutterLocalNotificationsPlugin _localNotifications = FlutterLocalNotificationsPlugin();
+
+Future<void> initialize() async {
+    // 1. Meminta Izin Notifikasi
+    NotificationSettings settings = await _firebaseMessaging.requestPermission(
+      alert: true,
+      badge: true,
+      sound: true,
+    );
+
+    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
+      print('Izin notifikasi diberikan oleh user.');
+    } else {
+      print('Izin notifikasi ditolak/belum diberikan.');
+    }
