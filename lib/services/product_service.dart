@@ -1,15 +1,15 @@
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:project_jasun/models/product_model.dart';
 
 class ProductService {
   final SupabaseClient _supabase = Supabase.instance.client;
 
-  Future<List<dynamic>> getProducts() async {
-  final response = await _supabase
-      .from('products')
-      .select();
+  Future<List<Product>> getProducts() async {
+    final response = await _supabase
+        .from('products')
+        .select();
 
-  return response;
+    final data = response as List<dynamic>;
+    return data.map((json) => Product.fromJson(json)).toList();
+  }
 }
-
-}
-
