@@ -1,5 +1,6 @@
 import 'package:project_jasun/models/product_model.dart';
 
+
 class CartItem {
   final Product product;
   int quantity;

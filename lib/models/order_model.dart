@@ -11,7 +11,6 @@ class Order {
     required this.createdAt,
   });
 
-  
   factory Order.fromJson(Map<String, dynamic> json) {
     return Order(
       id: json['id'] as int,
