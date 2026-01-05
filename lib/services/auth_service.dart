@@ -13,3 +13,19 @@ class AuthService {
       password: password,
     );
   }
+
+  // Register (BARU DITAMBAHKAN)
+  Future<AuthResponse> signUp({
+    required String email,
+    required String password,
+    required String fullName,
+  }) async {
+    return await _supabase.auth.signUp(
+      email: email,
+      password: password,
+      data: {
+        'full_name': fullName,
+      }, // Data ini akan masuk ke trigger SQL public.users
+    );
+  }
+  
