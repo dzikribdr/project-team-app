@@ -8,3 +8,7 @@ Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   // Jika perlu melakukan sesuatu saat background, misal simpan ke local storage
   print("Handling a background message: ${message.messageId}");
 }
+
+class NotificationService {
+  final FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance;
+  final FlutterLocalNotificationsPlugin _localNotifications = FlutterLocalNotificationsPlugin();
