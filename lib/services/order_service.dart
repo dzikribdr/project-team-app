@@ -8,13 +8,16 @@ class OrderService {
     final user = _supabase.auth.currentUser;
     if (user == null) return [];
 
-    final response = await _supabase
-        .from('orders')
-        .select()
-        .eq('user_id', user.id);
+    try {
+      final response = await _supabase
+          .from('orders')
+          .select()
+          .eq('user_id', user.id);
 
-    final data = response as List<dynamic>;
-    return data.map((json) => Order.fromJson(json)).toList();
+      final data = response as List<dynamic>;
+      return data.map((json) => Order.fromJson(json)).toList();
+    } catch (e) {
+      throw Exception('Gagal mengambil riwayat order: $e');
+    }
   }
 }
-
