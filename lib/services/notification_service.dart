@@ -52,3 +52,7 @@ Future<void> initialize() async {
       description: 'This channel is used for important notifications.', // description
       importance: Importance.max,
     );
+
+    await _localNotifications
+        .resolvePlatformSpecificImplementation<AndroidFlutterLocalNotificationsPlugin>()
+        ?.createNotificationChannel(channel);
