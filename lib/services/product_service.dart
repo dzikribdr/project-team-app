@@ -4,11 +4,17 @@ import 'package:project_jasun/models/product_model.dart';
 class ProductService {
   final SupabaseClient _supabase = Supabase.instance.client;
 
-  Future<List<Product>> getProducts() async {
+  Future<List<Product>> getProducts({int? categoryId}) async {
     try {
-      final response = await _supabase
+      var query = _supabase
           .from('products')
           .select();
+
+      if (categoryId != null && categoryId != 0) {
+        query = query.eq('category_id', categoryId);
+      }
+
+      final response = await query;
 
       final data = response as List<dynamic>;
       return data.map((json) => Product.fromJson(json)).toList();
