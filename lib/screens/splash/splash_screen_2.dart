@@ -9,3 +9,15 @@ class SplashScreen2 extends StatefulWidget {
   @override
   State<SplashScreen2> createState() => _SplashScreen2State();
 }
+
+class _SplashScreen2State extends State<SplashScreen2> {
+  Timer? _timer;
+
+  @override
+  void initState() {
+    super.initState();
+    // Opsional: Tetap ada timer otomatis 5 detik, atau matikan jika ingin manual klik tombol
+    _timer = Timer(const Duration(seconds: 30), () {
+      _navigateToLogin();
+    });
+  }
