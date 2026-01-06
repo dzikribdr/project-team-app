@@ -240,3 +240,24 @@ class _CartScreenState extends State<CartScreen> {
                               ),
                             );
                           },
+                           style: ElevatedButton.styleFrom(
+                            backgroundColor: AppConstants.cyanColor,
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.symmetric(vertical: 16),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                          ),
+                          child: const Text(
+                            "LANJUT KE PEMBAYARAN",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+    );
+  }
