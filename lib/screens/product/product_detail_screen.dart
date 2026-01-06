@@ -73,3 +73,23 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
           ),
         ),
       ),
+      extendBodyBehindAppBar: true, // Agar gambar bisa sampai paling atas
+      body: Column(
+        children: [
+          // 1. Gambar Produk (Scrollable area)
+          Expanded(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // Gambar Besar
+                  SizedBox(
+                    height: 350,
+                    width: double.infinity,
+                    child: Image.network(
+                      product.imageUrl,
+                      fit: BoxFit.cover,
+                      errorBuilder: (_, __, ___) => 
+                        const Center(child: Icon(Icons.broken_image, size: 50, color: Colors.grey)),
+                    ),
+                  ),
