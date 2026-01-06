@@ -78,3 +78,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                           ],
                         ),
                       ),
+                       // Opsional: Tambah Pattern overlay jika mau (pake Image.asset transparan)
+                      child: const Icon(Icons.school, size: 80, color: Colors.white24), 
+                    ),
+                  ),
