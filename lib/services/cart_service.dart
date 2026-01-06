@@ -23,3 +23,15 @@ class CartService {
       _items.add(CartItem(product: product, quantity: quantity));
     }
   }
+
+   void updateQuantity(Product product, int delta) {
+    final index = _items.indexWhere((item) => item.product.id == product.id);
+    if (index != -1) {
+      _items[index].quantity += delta;
+      
+      // Hapus jika quantity 0 atau negatif
+      if (_items[index].quantity <= 0) {
+        removeItem(product.id);
+      }
+    }
+  }
