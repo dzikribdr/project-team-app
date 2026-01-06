@@ -13,3 +13,12 @@ class HomeScreen extends StatefulWidget {
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
+
+class _HomeScreenState extends State<HomeScreen> {
+  final ProductService _productService = ProductService();
+
+  // Ambil nama user
+  String get _userName {
+    final user = Supabase.instance.client.auth.currentUser;
+    return user?.userMetadata?['full_name'] ?? user?.email ?? 'Vapers';
+  }
