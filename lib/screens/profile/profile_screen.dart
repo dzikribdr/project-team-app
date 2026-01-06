@@ -13,3 +13,17 @@ class ProfileScreen extends StatefulWidget {
   @override
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  final AuthService _authService = AuthService();
+  final OrderService _orderService = OrderService();
+
+  // Variabel untuk menampung data user
+  String _fullName = 'Loading...';
+  String _email = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _loadUserProfile(); // Ambil data saat halaman dibuka
+  }
