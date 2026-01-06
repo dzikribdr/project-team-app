@@ -306,3 +306,8 @@ Future<bool> showDeleteConfirmation(
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text("Batal", style: TextStyle(color: Colors.grey)),
+            ),
