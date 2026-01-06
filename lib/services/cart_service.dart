@@ -75,3 +75,10 @@ class CartService {
       if (isDeleted) {
         throw Exception("Maaf, produk '${item.product.name}' baru saja dihapus oleh Admin dan tidak lagi tersedia.");
       }
+
+      // 2. Cek apakah stok cukup
+      if (currentStock < item.quantity) {
+         throw Exception("Stok '${item.product.name}' tidak mencukupi. Sisa stok: $currentStock");
+      }
+    }
+    // ----------------------------------------
