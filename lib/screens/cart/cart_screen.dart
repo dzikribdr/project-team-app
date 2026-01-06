@@ -163,3 +163,11 @@ class _CartScreenState extends State<CartScreen> {
                                           color: Colors.grey,
                                         ),
                                         onPressed: () async {
+                                           // 1. Validasi Customer
+                                          bool
+                                          confirm = await showDeleteConfirmation(
+                                            context,
+                                            title: "Hapus dari Keranjang",
+                                            message:
+                                                "Apakah Anda yakin ingin membatalkan pembelian barang ini?",
+                                          );
