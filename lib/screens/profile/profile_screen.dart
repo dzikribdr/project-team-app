@@ -51,3 +51,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
       decimalDigits: 0,
     ).format(price);
   }
+
+  Future<void> _handleLogout() async {
+    await _authService.signOut();
+    if (!mounted) return;
+
+    Navigator.of(context).pushAndRemoveUntil(
+      MaterialPageRoute(builder: (_) => const LoginScreen()),
+      (route) => false,
+    );
+  }
