@@ -84,3 +84,23 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                  onChanged: (val) => setState(() => _selectedPayment = val!),
                ),
              )),
+
+             const Spacer(),
+             
+             ElevatedButton(
+               onPressed: _isLoading ? null : _processOrder,
+               style: ElevatedButton.styleFrom(
+                 backgroundColor: AppConstants.accentColor, 
+                 minimumSize: const Size(double.infinity, 50),
+                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12))
+               ),
+               child: _isLoading 
+                 ? const CircularProgressIndicator(color: Colors.black) 
+                 : const Text("BUAT PESANAN", style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold)),
+             )
+          ],
+        ),
+      ),
+    );
+  }
+}
