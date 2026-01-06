@@ -26,6 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   void initState() {
     super.initState();
     _loadUserProfile(); // Ambil data saat halaman dibuka
+
   }
 
   // Fungsi Ambil Data User dari Supabase Auth
@@ -60,4 +61,5 @@ class _ProfileScreenState extends State<ProfileScreen> {
       MaterialPageRoute(builder: (_) => const LoginScreen()),
       (route) => false,
     );
+
   }
