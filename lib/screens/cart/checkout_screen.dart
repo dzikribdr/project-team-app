@@ -63,3 +63,16 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         backgroundColor: AppConstants.primaryColor,
         iconTheme: const IconThemeData(color: Colors.white),
       ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+             const Text("Pilih Metode Pembayaran", style: TextStyle(color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold)),
+             const SizedBox(height: 16),
+             ..._methods.map((method) => Container(
+               margin: const EdgeInsets.only(bottom: 8),
+               decoration: BoxDecoration(
+                 color: AppConstants.cardBgColor,
+                 borderRadius: BorderRadius.circular(8)
+               ),
