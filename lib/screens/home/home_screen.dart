@@ -100,3 +100,22 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+            const SizedBox(height: 12),
+            _buildCategorySection(context),
+
+            const SizedBox(height: 24),
+
+            // 3. PRODUK TERBARU (Horizontal Scroll)
+            _buildSectionHeader("Produk Terbaru", () {
+              // Klik "Lihat Semua" -> ke Catalog
+              _navigateToCategory(context, 0);
+            }),
+            const SizedBox(height: 12),
+            _buildNewArrivals(),
+
+            const SizedBox(height: 24),
+
+            // 4. PROMO BANNER (Statik)
+            _buildPromoBanner(),
+
+            const SizedBox(height: 24),
