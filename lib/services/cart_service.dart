@@ -92,3 +92,15 @@ class CartService {
     }).select().single();
 
     final orderId = orderResponse['id'];
+
+    // 2. Masukkan Item Order
+    final List<Map<String, dynamic>> orderItemsData = _items.map((item) {
+      return {
+        'order_id': orderId,
+        'product_id': item.product.id,
+        'quantity': item.quantity,
+        'price': item.product.price,
+      };
+    }).toList();
+
+    await supabase.from('order_items').insert(orderItemsData);
