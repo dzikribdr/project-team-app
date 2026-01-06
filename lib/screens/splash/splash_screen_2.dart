@@ -113,3 +113,25 @@ class _SplashScreen2State extends State<SplashScreen2> {
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 13, color: Color(0xFF78858F)),
                   ),
+
+                   const SizedBox(height: 24),
+
+                  // --- 3. BUTTONS ---
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 24, left: 20, right: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        // Tombol 1: Outlined (Info)
+                        Expanded(
+                          child: OutlinedButton(
+                            onPressed: () {},
+                            style: OutlinedButton.styleFrom(
+                              side: const BorderSide(color: Colors.black, width: 2),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                              foregroundColor: Colors.black,
+                              padding: const EdgeInsets.symmetric(vertical: 12),
+                            ),
+                            child: const Text("INFO", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                          ),
+                        ),
