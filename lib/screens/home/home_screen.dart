@@ -182,3 +182,15 @@ class _HomeScreenState extends State<HomeScreen> {
     required String subtitle,
     required IconData imageIcon,
   }) {
+     return Container(
+      margin: const EdgeInsets.only(right: 12, left: 16), // Margin antar banner
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(16),
+        gradient: LinearGradient(
+          colors: [color, color.withOpacity(0.6)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
