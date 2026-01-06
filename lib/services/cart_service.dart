@@ -40,3 +40,8 @@ class CartService {
   void removeItem(int id) {
     _items.removeWhere((item) => item.product.id == id);
   }
+
+  // Hitung Total Belanja
+  double getTotalPrice() {
+    return _items.fold(0, (sum, item) => sum + item.totalPrice);
+  }
