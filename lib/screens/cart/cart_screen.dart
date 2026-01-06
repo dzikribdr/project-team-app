@@ -42,3 +42,21 @@ class _CartScreenState extends State<CartScreen> {
         elevation: 0,
         automaticallyImplyLeading: false,
       ),
+      body: items.isEmpty
+          ? const Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.shopping_cart_outlined,
+                    size: 80,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(height: 16),
+                  Text(
+                    "Keranjang kamu kosong",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
+              ),
+            )
