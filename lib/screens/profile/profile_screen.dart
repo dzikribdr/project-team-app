@@ -146,3 +146,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
             ),
           ),
+           const SizedBox(height: 8),
+
+          Expanded(
+            child: FutureBuilder<List<Order>>(
+              future: _orderService.getMyOrders(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                if (snapshot.hasError) {
+                  return Center(
+                    child: Text("Error: ${snapshot.error}", style: const TextStyle(color: Colors.red)),
+                  );
+                }
