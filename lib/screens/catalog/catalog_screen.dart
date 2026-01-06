@@ -98,3 +98,13 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     ),
                   );
                 }
+
+                final products = snapshot.data!;
+                return GridView.builder(
+                  padding: const EdgeInsets.all(16),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.75,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                  ),
