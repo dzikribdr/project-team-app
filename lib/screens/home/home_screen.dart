@@ -351,3 +351,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   );
                 },
+                child: Container(
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: AppConstants.cardBgColor,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
