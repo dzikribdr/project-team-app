@@ -21,3 +21,9 @@ class _SplashScreen2State extends State<SplashScreen2> {
       _navigateToLogin();
     });
   }
+
+  @override
+  void dispose() {
+    _timer?.cancel(); // Matikan timer jika user pindah halaman sebelum waktu habis
+    super.dispose();
+  }
