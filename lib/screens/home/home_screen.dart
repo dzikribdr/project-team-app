@@ -464,3 +464,29 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+  
+    Widget _buildRecommendationList() {
+    return FutureBuilder<List<Product>>(
+      future: _productService.getProducts(),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) return const SizedBox();
+        // Ambil produk, acak urutannya (shuffle), lalu ambil 10
+        final products = snapshot.data!..shuffle();
+        final displayProducts = products.take(6).toList();
+
+        return ListView.separated(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          shrinkWrap: true, // PENTING agar bisa di dalam ScrollView
+          physics:
+              const NeverScrollableScrollPhysics(), // Matikan scroll listview, ikut scroll parent
+          itemCount: displayProducts.length,
+          separatorBuilder: (_, __) => const SizedBox(height: 12),
+          itemBuilder: (context, index) {
+            final product = displayProducts[index];
+            return GestureDetector(
+              onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (_) => ProductDetailScreen(product: product),
+                ),
+              ),
