@@ -42,3 +42,29 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      // AppBar custom yang lebih modern
+      appBar: AppBar(
+        backgroundColor: AppConstants.primaryColor,
+        elevation: 0,
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              "Selamat Datang,",
+              style: TextStyle(fontSize: 14, color: Colors.grey),
+            ),
+            Text(
+              _userName,
+              style: const TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ],
+        ),
