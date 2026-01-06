@@ -316,3 +316,14 @@ class _HomeScreenState extends State<HomeScreen> {
             child: const CircularProgressIndicator(),
           );
         }
+        if (!snapshot.hasData || snapshot.data!.isEmpty) {
+          return const SizedBox(
+            height: 100,
+            child: Center(
+              child: Text(
+                "Belum ada produk.",
+                style: TextStyle(color: Colors.grey),
+              ),
+            ),
+          );
+        }
