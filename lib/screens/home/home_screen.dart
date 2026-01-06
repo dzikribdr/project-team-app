@@ -305,3 +305,14 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+  Widget _buildNewArrivals() {
+    return FutureBuilder<List<Product>>(
+      future: _productService.getProducts(), // Ambil semua data
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Container(
+            height: 200,
+            alignment: Alignment.center,
+            child: const CircularProgressIndicator(),
+          );
+        }
