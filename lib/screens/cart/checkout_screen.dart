@@ -14,3 +14,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   String _selectedPayment = 'Transfer Bank';
   final List<String> _methods = ['Transfer Bank', 'E-Wallet', 'COD (Bayar di Tempat)'];
   bool _isLoading = false;
+
+   Future<void> _processOrder() async {
+    setState(() => _isLoading = true);
