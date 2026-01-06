@@ -233,3 +233,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
     );
   }
+
+  Widget _buildStatusBadge(String status) {
+    Color color;
+    switch (status.toLowerCase()) {
+      case 'completed':
+        color = Colors.green;
+        break;
+      case 'shipped':
+        color = Colors.blue;
+        break;
+      default:
+        color = Colors.orange;
+    }
