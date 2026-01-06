@@ -464,7 +464,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
-  
+
     Widget _buildRecommendationList() {
     return FutureBuilder<List<Product>>(
       future: _productService.getProducts(),
@@ -490,3 +490,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   builder: (_) => ProductDetailScreen(product: product),
                 ),
               ),
+              child: Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: AppConstants.cardBgColor,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.white10),
+                ),
