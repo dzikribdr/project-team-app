@@ -357,3 +357,23 @@ class _HomeScreenState extends State<HomeScreen> {
                     color: AppConstants.cardBgColor,
                     borderRadius: BorderRadius.circular(12),
                   ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Gambar
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: const BorderRadius.vertical(
+                            top: Radius.circular(12),
+                          ),
+                          child: Image.network(
+                            product.imageUrl,
+                            width: double.infinity,
+                            fit: BoxFit.cover,
+                            errorBuilder: (_, __, ___) => Container(
+                              color: Colors.grey[800],
+                              child: const Icon(Icons.broken_image),
+                            ),
+                          ),
+                        ),
+                      ),
