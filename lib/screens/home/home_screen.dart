@@ -413,3 +413,19 @@ class _HomeScreenState extends State<HomeScreen> {
       },
     );
   }
+
+  Widget _buildPromoBanner() {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: AppConstants.accentColor,
+        borderRadius: BorderRadius.circular(12),
+        image: const DecorationImage(
+          image: NetworkImage(
+            "https://via.placeholder.com/500x150",
+          ), // Bisa ganti gambar pattern/background
+          fit: BoxFit.cover,
+          opacity: 0.1, // Biar teks terbaca
+        ),
+      ),
