@@ -6,3 +6,10 @@ import 'package:project_jasun/services/auth_service.dart';
 import 'package:project_jasun/services/order_service.dart';
 import 'package:project_jasun/screens/auth/login_screen.dart';
 import 'package:project_jasun/core/constants.dart';
+
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
+
+  @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
