@@ -85,3 +85,15 @@ class _SplashScreen2State extends State<SplashScreen2> {
 
                    // --- SPACING UNTUK AVATAR ---
                   const SizedBox(height: 60), // Memberi ruang karena avatar menumpuk
+
+                  // --- 2. TEXT CONTENT ---
+                  const Text(
+                    "Dandi Taufiqurrahman", // --main-color
+                    style: TextStyle(
+                      fontFamily: 'Roboto', // System UI
+                      fontSize: 18,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.black,
+                    ),
+                  ),
+                  const SizedBox(height: 8),
