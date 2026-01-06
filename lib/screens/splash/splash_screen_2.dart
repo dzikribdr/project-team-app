@@ -60,3 +60,21 @@ class _SplashScreen2State extends State<SplashScreen2> {
             children: [
               Column(
                 mainAxisSize: MainAxisSize.min,
+                children: [
+                  // --- 1. CARD IMG (HEADER) ---
+                  ClipRRect(
+                    borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+                    child: Container(
+                      height: 150, // height: 192px (disesuaikan sedikit)
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                        // Kita buat gradient mirip SVG di CSS
+                        gradient: LinearGradient(
+                          begin: Alignment.topLeft,
+                          end: Alignment.bottomRight,
+                          colors: [
+                            Color(0xFFFC726E), // Warna merah muda dari CSS
+                            Color(0xFFFFC3A0),
+                          ],
+                        ),
+                      ),
