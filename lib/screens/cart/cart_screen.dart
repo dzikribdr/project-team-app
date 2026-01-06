@@ -171,3 +171,10 @@ class _CartScreenState extends State<CartScreen> {
                                             message:
                                                 "Apakah Anda yakin ingin membatalkan pembelian barang ini?",
                                           );
+
+                                           // 2. Jika pilih 'Hapus'
+                                          if (confirm) {
+                                            // Hapus dari SERVICE
+                                            _cartService.removeItem(
+                                              item.product.id,
+                                            );
