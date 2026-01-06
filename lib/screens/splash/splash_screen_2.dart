@@ -54,3 +54,9 @@ class _SplashScreen2State extends State<SplashScreen2> {
               ),
             ],
           ),
+          child: Stack(
+            clipBehavior: Clip.none,
+            alignment: Alignment.center,
+            children: [
+              Column(
+                mainAxisSize: MainAxisSize.min,
