@@ -76,3 +76,17 @@ class _CartScreenState extends State<CartScreen> {
                           color: AppConstants.cardBgColor,
                           borderRadius: BorderRadius.circular(12),
                         ),
+                        child: Row(
+                          children: [
+                            // Gambar Kecil
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(8),
+                              child: Image.network(
+                                item.product.imageUrl,
+                                width: 70,
+                                height: 70,
+                                fit: BoxFit.cover,
+                                errorBuilder: (_, __, ___) =>
+                                    const Icon(Icons.image, color: Colors.grey),
+                              ),
+                            ),
