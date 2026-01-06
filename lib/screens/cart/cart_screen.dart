@@ -3,3 +3,10 @@ import 'package:intl/intl.dart';
 import 'package:project_jasun/core/constants.dart';
 import 'package:project_jasun/services/cart_service.dart';
 import 'package:project_jasun/screens/cart/checkout_screen.dart';
+
+class CartScreen extends StatefulWidget {
+  const CartScreen({super.key});
+
+  @override
+  State<CartScreen> createState() => _CartScreenState();
+}
