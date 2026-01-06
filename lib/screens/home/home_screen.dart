@@ -268,3 +268,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   size: 28,
                 ),
               ),
+              const SizedBox(height: 8),
+              Text(
+                cat['label'] as String,
+                style: const TextStyle(color: Colors.grey, fontSize: 12),
+              ),
+            ],
+          ),
+        );
+      }).toList(),
+    );
+  }
