@@ -61,3 +61,19 @@ class _ProfileScreenState extends State<ProfileScreen> {
       (route) => false,
     );
   }
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      appBar: AppBar(
+        title: const Text("Profil Saya"),
+        backgroundColor: AppConstants.primaryColor,
+        elevation: 0,
+        actions: [
+          IconButton(
+            onPressed: _handleLogout,
+            icon: const Icon(Icons.logout, color: Colors.red),
+          ),
+        ],
+      ),
