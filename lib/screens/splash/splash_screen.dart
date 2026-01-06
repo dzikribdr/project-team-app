@@ -18,3 +18,8 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     _redirect();
   }
+
+  Future<void> _redirect() async {
+    // 1. Delay 2 detik
+    await Future.delayed(const Duration(seconds: 2));
+    if (!mounted) return;
