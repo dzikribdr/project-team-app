@@ -31,3 +31,14 @@ class _HomeScreenState extends State<HomeScreen> {
       decimalDigits: 0,
     ).format(price);
   }
+
+
+  // Navigasi ke Kategori Tertentu
+  void _navigateToCategory(BuildContext context, int categoryId) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => CatalogScreen(initialCategoryId: categoryId),
+      ),
+    );
+  }
