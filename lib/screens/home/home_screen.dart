@@ -165,3 +165,13 @@ class _HomeScreenState extends State<HomeScreen> {
             subtitle: "Centaurus M200 Ready",
             imageIcon: Icons.vape_free,
           ),
+          _buildBannerItem(
+            color: const Color(0xFF3282B8),
+            title: "Gratis Coil",
+            subtitle: "Setiap pembelian Mod",
+            imageIcon: Icons.settings,
+          ),
+        ],
+      ),
+    );
+  }
