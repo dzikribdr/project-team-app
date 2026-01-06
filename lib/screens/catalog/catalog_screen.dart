@@ -78,3 +78,23 @@ class _CatalogScreenState extends State<CatalogScreen> {
               ],
             ),
           ),
+
+          Expanded(
+            child: FutureBuilder<List<Product>>(
+              future: _fetchProducts(),
+              builder: (context, snapshot) {
+                if (snapshot.connectionState == ConnectionState.waiting) {
+                  return const Center(child: CircularProgressIndicator());
+                }
+                if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                  return const Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.search_off, size: 60, color: Colors.grey),
+                        SizedBox(height: 16),
+                        Text("Produk tidak ditemukan", style: TextStyle(color: Colors.grey)),
+                      ],
+                    ),
+                  );
+                }
