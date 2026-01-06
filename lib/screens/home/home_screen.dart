@@ -75,3 +75,28 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
+      body: SingleChildScrollView(
+        physics:
+            const BouncingScrollPhysics(), // Efek scroll membal (iOS style)
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: 16),
+
+            // 1. HERO BANNER (PageView)
+            _buildHeroSlider(),
+
+            const SizedBox(height: 24),
+
+            // 2. KATEGORI (Sekarang Bisa Diklik)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: const Text(
+                "Kategori",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
