@@ -76,3 +76,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                  color: AppConstants.cardBgColor,
                  borderRadius: BorderRadius.circular(8)
                ),
+               child: RadioListTile<String>(
+                 title: Text(method, style: const TextStyle(color: Colors.white)),
+                 value: method,
+                 groupValue: _selectedPayment,
+                 activeColor: AppConstants.accentColor,
+                 onChanged: (val) => setState(() => _selectedPayment = val!),
+               ),
+             )),
