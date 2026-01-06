@@ -302,3 +302,7 @@ Future<bool> showDeleteConfirmation(
             title,
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
+          content: Text(message),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
