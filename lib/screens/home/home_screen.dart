@@ -452,3 +452,15 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.black,
+              foregroundColor: Colors.white,
+            ),
+            child: const Text("Klaim"),
+          ),
+        ],
+      ),
+    );
+  }
