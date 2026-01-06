@@ -22,3 +22,7 @@ class _CartScreenState extends State<CartScreen> {
       decimalDigits: 0,
     ).format(price);
   }
+
+   void _refresh() {
+    setState(() {});
+  }
