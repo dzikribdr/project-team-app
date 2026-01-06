@@ -316,6 +316,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: const CircularProgressIndicator(),
           );
         }
+
         if (!snapshot.hasData || snapshot.data!.isEmpty) {
           return const SizedBox(
             height: 100,
@@ -327,3 +328,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           );
         }
+
+        final products = snapshot.data!
+            .take(5)
+            .toList(); // Ambil 5 produk pertama saja
