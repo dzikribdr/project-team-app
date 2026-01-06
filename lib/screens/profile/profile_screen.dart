@@ -129,3 +129,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             ),
           ),
+
+          const SizedBox(height: 20),
+
+          // ===== RIWAYAT PESANAN =====
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Riwayat Pesanan",
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge
+                    ?.copyWith(color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            ),
+          ),
