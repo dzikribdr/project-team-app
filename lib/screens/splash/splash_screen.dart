@@ -5,3 +5,9 @@ import 'package:project_jasun/core/constants.dart';
 import 'package:project_jasun/screens/auth/login_screen.dart';
 import 'package:project_jasun/screens/main_screen.dart';
 
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
