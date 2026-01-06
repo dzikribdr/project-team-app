@@ -237,3 +237,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+  Widget _buildCategorySection(BuildContext context) {
+    // List Kategori Manual (Bisa juga dari DB kalau mau dinamis)
+    final categories = [
+      {'id': 1, 'label': 'Device', 'icon': Icons.vape_free},
+      {'id': 2, 'label': 'Liquid', 'icon': Icons.water_drop},
+      {'id': 3, 'label': 'Accessory', 'icon': Icons.settings},
+      {'id': 0, 'label': 'Semua', 'icon': Icons.grid_view},
+    ];
