@@ -90,3 +90,4 @@ class _CartScreenState extends State<CartScreen> {
                                     const Icon(Icons.image, color: Colors.grey),
                               ),
                             ),
+                            const SizedBox(width: 12),
