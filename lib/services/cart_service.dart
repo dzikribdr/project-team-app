@@ -7,3 +7,6 @@ class CartService {
   static final CartService _instance = CartService._internal();
   factory CartService() => _instance;
   CartService._internal();
+
+  // List penyimpan data sementara
+  final List<CartItem> _items = [];
