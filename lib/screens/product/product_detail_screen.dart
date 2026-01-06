@@ -137,3 +137,39 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                             ),
                           ],
                         ),
+
+                        const SizedBox(height: 8),
+                        
+                        // Harga
+                        Text(
+                          _formatCurrency(product.price),
+                          style: const TextStyle(
+                            color: AppConstants.accentColor,
+                            fontSize: 22,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+
+                        const SizedBox(height: 24),
+                        const Divider(color: Colors.grey),
+                        const SizedBox(height: 16),
+
+                        // Deskripsi
+                        const Text(
+                          "Deskripsi Produk",
+                          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        const SizedBox(height: 8),
+                        Text(
+                          product.description.isNotEmpty 
+                            ? product.description 
+                            : "Tidak ada deskripsi tersedia.",
+                          style: const TextStyle(color: Colors.grey, height: 1.5),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
