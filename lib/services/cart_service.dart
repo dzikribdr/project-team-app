@@ -35,3 +35,8 @@ class CartService {
       }
     }
   }
+
+  // Hapus item berdasarkan ID Product
+  void removeItem(int id) {
+    _items.removeWhere((item) => item.product.id == id);
+  }
