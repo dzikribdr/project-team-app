@@ -70,3 +70,8 @@ class CartService {
       
       final bool isDeleted = productData['is_deleted'] ?? false;
       final int currentStock = productData['stock'] ?? 0;
+
+      // 1. Cek apakah produk sudah dihapus admin
+      if (isDeleted) {
+        throw Exception("Maaf, produk '${item.product.name}' baru saja dihapus oleh Admin dan tidak lagi tersedia.");
+      }
