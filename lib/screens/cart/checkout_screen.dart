@@ -45,4 +45,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           ],
         ),
       );
+    }catch (e) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text("Gagal: $e"), backgroundColor: Colors.red),
+      );
+    } finally {
+      if (mounted) setState(() => _isLoading = false);
     }
+  }
