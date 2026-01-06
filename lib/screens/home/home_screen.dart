@@ -159,3 +159,9 @@ class _HomeScreenState extends State<HomeScreen> {
             subtitle: "Untuk Liquid Oat Drips",
             imageIcon: Icons.water_drop,
           ),
+          _buildBannerItem(
+            color: const Color(0xFF0F4C75),
+            title: "New Device!",
+            subtitle: "Centaurus M200 Ready",
+            imageIcon: Icons.vape_free,
+          ),
