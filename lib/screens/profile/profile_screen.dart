@@ -39,3 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       });
     }
   }
+
+  String _formatDate(DateTime date) {
+    return DateFormat('dd MMM yyyy, HH:mm').format(date);
+  }
