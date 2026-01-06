@@ -110,3 +110,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _email,
                   style: const TextStyle(color: Colors.grey),
                 ),
+
+                const SizedBox(height: 12),
+
+                // LABEL ROLE CUSTOMER (Pengganti NIM/Jurusan)
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: AppConstants.cyanColor.withValues(alpha: 0.2),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: AppConstants.cyanColor),
+                  ),
+                  child: const Text(
+                    "Customer Member",
+                    style: TextStyle(color: AppConstants.cyanColor, fontWeight: FontWeight.bold, fontSize: 12),
+                  ),
+                ),
+              ],
+            ),
+          ),
