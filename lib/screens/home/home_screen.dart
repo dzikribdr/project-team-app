@@ -391,3 +391,25 @@ class _HomeScreenState extends State<HomeScreen> {
                                 color: Colors.white,
                               ),
                             ),
+                            const SizedBox(height: 4),
+                            Text(
+                              _formatCurrency(product.price),
+                              style: const TextStyle(
+                                color: AppConstants.accentColor,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
+          ),
+        );
+      },
+    );
+  }
