@@ -8,3 +8,17 @@ class SplashScreen1 extends StatefulWidget {
   @override
   State<SplashScreen1> createState() => _SplashScreen1State();
 }
+
+class _SplashScreen1State extends State<SplashScreen1> {
+  @override
+  void initState() {
+    super.initState();
+    // Timer 3 detik, lalu pindah ke Splash 2
+    Timer(const Duration(seconds: 3), () {
+      // Gunakan pushReplacement agar user tidak bisa kembali ke layar ini
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => const SplashScreen2()),
+      );
+    });
+  }
