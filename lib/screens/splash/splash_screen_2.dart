@@ -97,3 +97,19 @@ class _SplashScreen2State extends State<SplashScreen2> {
                     ),
                   ),
                   const SizedBox(height: 8),
+
+                  // Subtitle: NIM & Jurusan
+                  const Text(
+                    "NIM: 1123150054",
+                    style: TextStyle(fontSize: 14, color: Color(0xFF78858F)),
+                  ),
+                  const Text(
+                    "Software Engineer-1 ",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 13, color: Color(0xFF78858F)),
+                  ),
+                  const Text(
+                    "Flutter - Admin Dashboard",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 13, color: Color(0xFF78858F)),
+                  ),
