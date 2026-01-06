@@ -34,3 +34,9 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       );
     }
   }
+
+   void _decrementQty() {
+    if (_quantity > 1) {
+      setState(() => _quantity--);
+    }
+  }
