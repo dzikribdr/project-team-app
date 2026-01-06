@@ -175,3 +175,17 @@ class _SplashScreen2State extends State<SplashScreen2> {
                       ),
                     ],
                   ),
+                   padding: const EdgeInsets.all(6), // Padding untuk border putih
+                  child: const CircleAvatar(
+                    backgroundImage: AssetImage('assets/images/foto_mahasiswa.jpg'),
+                    backgroundColor: Colors.grey, // Placeholder warna jika foto gagal
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
