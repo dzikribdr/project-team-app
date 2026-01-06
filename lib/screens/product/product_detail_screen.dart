@@ -173,3 +173,35 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
               ),
             ),
           ),
+
+          Container(
+            padding: const EdgeInsets.all(16),
+            decoration: const BoxDecoration(
+              color: AppConstants.cardBgColor,
+              border: Border(top: BorderSide(color: Colors.black12)),
+            ),
+            child: Row(
+              children: [
+                // Selector Quantity
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                  child: Row(
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.remove, color: Colors.white),
+                        onPressed: isOutOfStock ? null : _decrementQty,
+                      ),
+                      Text(
+                        "$_quantity",
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.add, color: Colors.white),
+                        onPressed: isOutOfStock ? null : _incrementQty,
+                      ),
+                    ],
+                  ),
+                ),
