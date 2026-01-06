@@ -50,3 +50,15 @@ class _CatalogScreenState extends State<CatalogScreen> {
       locale: 'id_ID', symbol: 'Rp ', decimalDigits: 0
     ).format(price);
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      // APP BAR PENTING: Agar ada tombol Back
+      appBar: AppBar(
+        title: const Text("Katalog Produk"),
+        backgroundColor: AppConstants.primaryColor,
+        foregroundColor: Colors.white, // Warna ikon back putih
+        elevation: 0,
+      ),
