@@ -50,3 +50,11 @@ class CartService {
   void clearCart() {
     _items.clear();
   }
+
+   // Checkout ke Supabase (DENGAN VALIDASI)
+  Future<void> checkout() async {
+    final supabase = Supabase.instance.client;
+    final user = supabase.auth.currentUser;
+
+    if (user == null) throw Exception("User tidak terdeteksi");
+    if (_items.isEmpty) throw Exception("Keranjang kosong");
