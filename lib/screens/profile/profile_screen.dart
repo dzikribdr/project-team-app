@@ -95,3 +95,4 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     style: const TextStyle(fontSize: 40, color: Colors.black, fontWeight: FontWeight.bold),
                   ),
                 ),
+                const SizedBox(height: 16),
