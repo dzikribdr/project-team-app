@@ -103,3 +103,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   textAlign: TextAlign.center,
                   style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold, color: Colors.white),
                 ),
+
+                const SizedBox(height: 8),
+                // EMAIL USER
+                Text(
+                  _email,
+                  style: const TextStyle(color: Colors.grey),
+                ),
