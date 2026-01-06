@@ -135,3 +135,25 @@ class _SplashScreen2State extends State<SplashScreen2> {
                             child: const Text("INFO", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                           ),
                         ),
+
+                        const SizedBox(width: 12),
+
+                        // Tombol 2: Solid (Lanjut Login)
+                        Expanded(
+                          child: ElevatedButton(
+                            onPressed: _navigateToLogin,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.black, // --main-color
+                              foregroundColor: Colors.white, // --bg-color
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(4)),
+                              padding: const EdgeInsets.symmetric(vertical: 12),
+                              elevation: 0,
+                            ),
+                            child: const Text("MASUK", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
