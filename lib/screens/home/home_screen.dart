@@ -209,3 +209,31 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontSize: 20,
                   ),
                 ),
+                const SizedBox(height: 4),
+                Text(
+                  subtitle,
+                  style: const TextStyle(color: Colors.white, fontSize: 14),
+                ),
+                const SizedBox(height: 12),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 6,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Text(
+                    "Cek Sekarang",
+                    style: TextStyle(fontSize: 10, color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Icon(imageIcon, size: 80, color: Colors.white.withOpacity(0.3)),
+        ],
+      ),
+    );
+  }
