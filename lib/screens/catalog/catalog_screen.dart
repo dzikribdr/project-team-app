@@ -26,3 +26,15 @@ class _CatalogScreenState extends State<CatalogScreen> {
     super.initState();
     _selectedCategoryId = widget.initialCategoryId;
   }
+
+  Future<List<Product>> _fetchProducts() async {
+    // MODIFIKASI DI SINI: Tambahkan .eq('is_deleted', false)
+    dynamic query = _supabase
+        .from('products')
+        .select()
+        .eq('is_deleted', false); 
+    
+    // Jika kategori bukan 0 (Semua), maka filter
+    if (_selectedCategoryId != 0) {
+      query = query.eq('category_id', _selectedCategoryId);
+    }
