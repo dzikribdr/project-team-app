@@ -246,3 +246,25 @@ class _HomeScreenState extends State<HomeScreen> {
       {'id': 3, 'label': 'Accessory', 'icon': Icons.settings},
       {'id': 0, 'label': 'Semua', 'icon': Icons.grid_view},
     ];
+    
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: categories.map((cat) {
+        return GestureDetector(
+          onTap: () => _navigateToCategory(context, cat['id'] as int),
+          child: Column(
+            children: [
+              Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: AppConstants.cardBgColor,
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: Colors.white10),
+                ),
+                child: Icon(
+                  cat['icon'] as IconData,
+                  color: AppConstants.cyanColor,
+                  size: 28,
+                ),
+              ),
