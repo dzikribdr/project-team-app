@@ -135,3 +135,27 @@ class _CatalogScreenState extends State<CatalogScreen> {
                                 ),
                               ),
                             ),
+                             Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(product.name, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                                  const SizedBox(height: 4),
+                                  Text(_formatCurrency(product.price), style: const TextStyle(color: AppConstants.accentColor, fontSize: 12)),
+                                ],
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
