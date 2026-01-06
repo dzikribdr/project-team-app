@@ -144,3 +144,18 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
+   Widget _buildHeroSlider() {
+    // Simulasi Banner Slider
+    return SizedBox(
+      height: 180,
+      child: PageView(
+        controller: PageController(viewportFraction: 0.9),
+        padEnds: false, // Mulai dari kiri
+        children: [
+          _buildBannerItem(
+            color: const Color(0xFF1F2937),
+            title: "Diskon 20%",
+            subtitle: "Untuk Liquid Oat Drips",
+            imageIcon: Icons.water_drop,
+          ),
