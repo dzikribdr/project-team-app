@@ -188,3 +188,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         color: AppConstants.cardBgColor,
                         borderRadius: BorderRadius.circular(12),
                       ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                "Order #${order.id}",
+                                style: const TextStyle(fontWeight: FontWeight.bold, color: AppConstants.cyanColor),
+                              ),
+                              _buildStatusBadge(order.status),
+                            ],
+                          ),
