@@ -62,3 +62,19 @@ class _CatalogScreenState extends State<CatalogScreen> {
         foregroundColor: Colors.white, // Warna ikon back putih
         elevation: 0,
       ),
+      body: Column(
+        children: [
+          // FILTER TOMBOL (Scroll Horizontal)
+          SizedBox(
+            height: 60,
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              children: [
+                _buildFilterChip(0, "Semua"),
+                _buildFilterChip(1, "Device"),
+                _buildFilterChip(2, "Liquid"),
+                _buildFilterChip(3, "Accessories"),
+              ],
+            ),
+          ),
