@@ -121,3 +121,17 @@ class _CatalogScreenState extends State<CatalogScreen> {
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(color: Colors.white10),
                         ),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                                child: Image.network(
+                                  product.imageUrl,
+                                  width: double.infinity,
+                                  fit: BoxFit.cover,
+                                  errorBuilder: (_,__,___) => Container(color: Colors.grey, child: const Icon(Icons.image)),
+                                ),
+                              ),
+                            ),
