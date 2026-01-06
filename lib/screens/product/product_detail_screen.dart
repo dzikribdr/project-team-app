@@ -53,3 +53,23 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
     );
     Navigator.pop(context);
   }
+
+  @override
+  Widget build(BuildContext context) {
+    final product = widget.product;
+    final isOutOfStock = product.stock <= 0;
+
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      // AppBar Transparan agar gambar terlihat full di atas (Opsional style)
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: CircleAvatar(
+          backgroundColor: Colors.black54,
+          child: IconButton(
+            icon: const Icon(Icons.arrow_back, color: Colors.white),
+            onPressed: () => Navigator.pop(context),
+          ),
+        ),
+      ),
