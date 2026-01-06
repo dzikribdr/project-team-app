@@ -22,3 +22,12 @@ class _HomeScreenState extends State<HomeScreen> {
     final user = Supabase.instance.client.auth.currentUser;
     return user?.userMetadata?['full_name'] ?? user?.email ?? 'Vapers';
   }
+
+ // Format Rupiah
+  String _formatCurrency(double price) {
+    return NumberFormat.currency(
+      locale: 'id_ID',
+      symbol: 'Rp ',
+      decimalDigits: 0,
+    ).format(price);
+  }
