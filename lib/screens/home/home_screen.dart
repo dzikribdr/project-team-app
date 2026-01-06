@@ -332,3 +332,22 @@ class _HomeScreenState extends State<HomeScreen> {
         final products = snapshot.data!
             .take(5)
             .toList(); // Ambil 5 produk pertama saja
+
+          return SizedBox(
+          height: 240,
+          child: ListView.separated(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            scrollDirection: Axis.horizontal,
+            itemCount: products.length,
+            separatorBuilder: (_, __) => const SizedBox(width: 12),
+            itemBuilder: (context, index) {
+              final product = products[index];
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => ProductDetailScreen(product: product),
+                    ),
+                  );
+                },
