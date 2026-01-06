@@ -45,3 +45,8 @@ class CartService {
   double getTotalPrice() {
     return _items.fold(0, (sum, item) => sum + item.totalPrice);
   }
+
+   // Kosongkan Cart
+  void clearCart() {
+    _items.clear();
+  }
