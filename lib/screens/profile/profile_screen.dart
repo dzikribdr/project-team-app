@@ -201,3 +201,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               _buildStatusBadge(order.status),
                             ],
                           ),
+                           const SizedBox(height: 8),
+                          Text(
+                            _formatDate(order.createdAt),
+                            style: const TextStyle(color: Colors.grey, fontSize: 12),
+                          ),
