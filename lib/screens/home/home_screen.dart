@@ -429,3 +429,19 @@ class _HomeScreenState extends State<HomeScreen> {
           opacity: 0.1, // Biar teks terbaca
         ),
       ),
+      child: Row(
+        children: [
+          const Icon(Icons.local_shipping, size: 40, color: Colors.black),
+          const SizedBox(width: 16),
+          const Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Gratis Ongkir!",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                  ),
+                ),
