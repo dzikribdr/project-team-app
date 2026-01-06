@@ -82,3 +82,13 @@ class CartService {
       }
     }
     // ----------------------------------------
+
+     // 1. Buat Order
+    final orderResponse = await supabase.from('orders').insert({
+      'user_id': user.id,
+      'total': getTotalPrice(),
+      'status': 'pending', 
+      'created_at': DateTime.now().toIso8601String(),
+    }).select().single();
+
+    final orderId = orderResponse['id'];
