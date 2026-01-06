@@ -40,3 +40,16 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
       setState(() => _quantity--);
     }
   }
+
+  void _addToCart() {
+    // Panggil Service
+    CartService().addToCart(widget.product, _quantity);
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text("Berhasil menambahkan $_quantity ${widget.product.name} ke keranjang"),
+        backgroundColor: Colors.green,
+      ),
+    );
+    Navigator.pop(context);
+  }
