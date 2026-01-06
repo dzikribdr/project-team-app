@@ -206,3 +206,30 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             _formatDate(order.createdAt),
                             style: const TextStyle(color: Colors.grey, fontSize: 12),
                           ),
+                          const Divider(color: Colors.white12),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Text("Total Belanja", style: TextStyle(color: Colors.white)),
+                              Text(
+                                _formatCurrency(order.total),
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: AppConstants.accentColor,
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        ],
+      ),
+    );
+  }
