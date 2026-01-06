@@ -22,3 +22,22 @@ class _SplashScreen1State extends State<SplashScreen1> {
       );
     });
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      // Latar belakang putih bersih agar logo terlihat jelas
+      backgroundColor: Colors.white, 
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(40.0),
+          child: Image.asset(
+            'assets/images/logo_kampus.png', // Pastikan nama file sesuai
+            width: 200, // Atur ukuran logo
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
+    );
+  }
+}
