@@ -113,3 +113,53 @@ class _CartScreenState extends State<CartScreen> {
                                       fontSize: 12,
                                     ),
                                   ),
+                                  const SizedBox(height: 8),
+
+                                  // Tombol + - dan Hapus
+                                  Row(
+                                    children: [
+                                      // Kurang
+                                      InkWell(
+                                        onTap: () {
+                                          _cartService.updateQuantity(
+                                            item.product,
+                                            -1,
+                                          );
+                                          _refresh();
+                                        },
+                                        child: const Icon(
+                                          Icons.remove_circle_outline,
+                                          color: Colors.grey,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      Text(
+                                        "${item.quantity}",
+                                        style: const TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      // Tambah
+                                      InkWell(
+                                        onTap: () {
+                                          _cartService.updateQuantity(
+                                            item.product,
+                                            1,
+                                          );
+                                          _refresh();
+                                        },
+                                        child: const Icon(
+                                          Icons.add_circle_outline,
+                                          color: AppConstants.accentColor,
+                                        ),
+                                      ),
+                                      const Spacer(),
+                                      // Hapus (LOGIKA SUDAH DIPERBAIKI)
+                                      IconButton(
+                                        icon: const Icon(
+                                          Icons.delete_outline,
+                                          color: Colors.grey,
+                                        ),
+                                        onPressed: () async {
