@@ -39,3 +39,30 @@ class _SplashScreenState extends State<SplashScreen> {
       );
     }
   }
+
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.cloud_circle, size: 100, color: AppConstants.accentColor),
+            const SizedBox(height: 20),
+            Text(
+              "VAPE VIOLENCE",
+              style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                letterSpacing: 2.0,
+              ),
+            ),
+            const SizedBox(height: 10),
+            const CircularProgressIndicator(color: AppConstants.cyanColor),
+          ],
+        ),
+      ),
+    );
+  }
+}
