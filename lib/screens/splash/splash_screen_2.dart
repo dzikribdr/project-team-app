@@ -27,3 +27,10 @@ class _SplashScreen2State extends State<SplashScreen2> {
     _timer?.cancel(); // Matikan timer jika user pindah halaman sebelum waktu habis
     super.dispose();
   }
+
+  void _navigateToLogin() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (context) => const LoginScreen()),
+    );
+  }
