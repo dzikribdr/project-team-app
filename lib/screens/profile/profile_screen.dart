@@ -27,3 +27,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
     super.initState();
     _loadUserProfile(); // Ambil data saat halaman dibuka
   }
+
+   // Fungsi Ambil Data User dari Supabase Auth
+  void _loadUserProfile() {
+    final user = Supabase.instance.client.auth.currentUser;
+    if (user != null) {
+      setState(() {
+        // Ambil nama dari metadata (saat register), jika kosong pakai 'Pelanggan'
+        _fullName = user.userMetadata?['full_name'] ?? 'Pelanggan';
+        _email = user.email ?? '-';
+      });
+    }
+  }
