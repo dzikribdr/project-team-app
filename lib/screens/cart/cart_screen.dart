@@ -33,3 +33,12 @@ class _CartScreenState extends State<CartScreen> {
     final subtotal = _cartService.getTotalPrice();
     final ongkir = items.isEmpty ? 0.0 : 15000.0; // Dummy Ongkir
     final total = subtotal + ongkir;
+
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      appBar: AppBar(
+        title: const Text("Keranjang Belanja"),
+        backgroundColor: AppConstants.primaryColor,
+        elevation: 0,
+        automaticallyImplyLeading: false,
+      ),
