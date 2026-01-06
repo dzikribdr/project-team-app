@@ -82,3 +82,6 @@ class _SplashScreen2State extends State<SplashScreen2> {
                       child: const Icon(Icons.school, size: 80, color: Colors.white24), 
                     ),
                   ),
+
+                   // --- SPACING UNTUK AVATAR ---
+                  const SizedBox(height: 60), // Memberi ruang karena avatar menumpuk
