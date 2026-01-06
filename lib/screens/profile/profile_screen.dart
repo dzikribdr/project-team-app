@@ -77,3 +77,21 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
         ],
       ),
+      body: Column(
+        children: [
+          // ===== HEADER PROFILE (DINAMIS) =====
+          Container(
+            padding: const EdgeInsets.all(24),
+            width: double.infinity,
+            color: AppConstants.cardBgColor,
+            child: Column(
+              children: [
+                // Avatar dengan Inisial Nama
+                CircleAvatar(
+                  radius: 50,
+                  backgroundColor: AppConstants.accentColor,
+                  child: Text(
+                    _fullName.isNotEmpty ? _fullName[0].toUpperCase() : '?',
+                    style: const TextStyle(fontSize: 40, color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
+                ),
