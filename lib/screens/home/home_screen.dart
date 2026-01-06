@@ -445,3 +445,10 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontSize: 16,
                   ),
                 ),
+                Text(
+                  "Untuk pembelian di atas 500rb",
+                  style: TextStyle(color: Colors.black87, fontSize: 12),
+                ),
+              ],
+            ),
+          ),
