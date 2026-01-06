@@ -133,3 +133,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+             const SizedBox(height: 12),
+            _buildRecommendationList(), // Mengambil sisa produk
+
+            const SizedBox(
+              height: 80,
+            ), // Spacer bawah agar tidak ketutup navbar
+          ],
+        ),
+      ),
+    );
+  }
