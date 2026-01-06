@@ -261,3 +261,30 @@ class _CartScreenState extends State<CartScreen> {
             ),
     );
   }
+
+   Widget _buildSummaryRow(String label, double val, {bool isBold = false}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            label,
+            style: TextStyle(
+              color: Colors.grey,
+              fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
+            ),
+          ),
+          Text(
+            _formatCurrency(val),
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: isBold ? FontWeight.bold : FontWeight.normal,
+              fontSize: isBold ? 16 : 14,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
