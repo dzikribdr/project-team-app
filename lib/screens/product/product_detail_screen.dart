@@ -117,3 +117,23 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                                 ),
                               ),
                             ),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: isOutOfStock ? Colors.red.withOpacity(0.2) : Colors.green.withOpacity(0.2),
+                                borderRadius: BorderRadius.circular(20),
+                                border: Border.all(
+                                  color: isOutOfStock ? Colors.red : Colors.green
+                                ),
+                              ),
+                              child: Text(
+                                isOutOfStock ? "Habis" : "Stok: ${product.stock}",
+                                style: TextStyle(
+                                  color: isOutOfStock ? Colors.red : Colors.green,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
