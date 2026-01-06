@@ -294,3 +294,14 @@ class _HomeScreenState extends State<HomeScreen> {
               color: Colors.white,
             ),
           ),
+          GestureDetector(
+            onTap: onTap,
+            child: const Text(
+              "Lihat Semua",
+              style: TextStyle(color: AppConstants.cyanColor, fontSize: 12),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
