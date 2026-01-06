@@ -34,3 +34,23 @@ class _SplashScreen2State extends State<SplashScreen2> {
       MaterialPageRoute(builder: (context) => const LoginScreen()),
     );
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor, // Background App
+      body: Center(
+        child: Container(
+          width: 300, // Sesuai CSS width: 300px
+          // height: 450, // Bisa auto height atau fixed
+          decoration: BoxDecoration(
+            color: Colors.white, // --bg-color: #fff
+            borderRadius: BorderRadius.circular(20), // border-radius: 20px
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                blurRadius: 10,
+                offset: const Offset(0, 5),
+              ),
+            ],
+          ),
