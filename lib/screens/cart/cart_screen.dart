@@ -26,3 +26,10 @@ class _CartScreenState extends State<CartScreen> {
    void _refresh() {
     setState(() {});
   }
+
+  @override
+  Widget build(BuildContext context) {
+    final items = _cartService.items;
+    final subtotal = _cartService.getTotalPrice();
+    final ongkir = items.isEmpty ? 0.0 : 15000.0; // Dummy Ongkir
+    final total = subtotal + ongkir;
