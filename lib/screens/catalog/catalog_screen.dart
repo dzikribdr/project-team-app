@@ -159,3 +159,23 @@ class _CatalogScreenState extends State<CatalogScreen> {
       ),
     );
   }
+
+  Widget _buildFilterChip(int id, String label) {
+    final isSelected = _selectedCategoryId == id;
+    return Padding(
+      padding: const EdgeInsets.only(right: 8),
+      child: ChoiceChip(
+        label: Text(label),
+        selected: isSelected,
+        onSelected: (selected) {
+          setState(() {
+            _selectedCategoryId = id;
+          });
+        },
+        selectedColor: AppConstants.accentColor,
+        backgroundColor: AppConstants.cardBgColor,
+        labelStyle: TextStyle(color: isSelected ? Colors.black : Colors.white),
+      ),
+    );
+  }
+}
