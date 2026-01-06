@@ -160,3 +160,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: Text("Error: ${snapshot.error}", style: const TextStyle(color: Colors.red)),
                   );
                 }
+                
+                final orders = snapshot.data ?? [];
+
+                if (orders.isEmpty) {
+                  return const Center(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.shopping_bag_outlined, size: 60, color: Colors.grey),
+                        SizedBox(height: 12),
+                        Text("Belum ada riwayat pesanan", style: TextStyle(color: Colors.grey)),
+                      ],
+                    ),
+                  );
+                }
