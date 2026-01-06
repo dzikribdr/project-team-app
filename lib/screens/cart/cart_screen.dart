@@ -311,3 +311,13 @@ Future<bool> showDeleteConfirmation(
               onPressed: () => Navigator.pop(context, false),
               child: const Text("Batal", style: TextStyle(color: Colors.grey)),
             ),
+             ElevatedButton(
+              onPressed: () => Navigator.pop(context, true),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+              child: const Text("Hapus", style: TextStyle(color: Colors.white)),
+            ),
+          ],
+        ),
+      ) ??
+      false;
+}
