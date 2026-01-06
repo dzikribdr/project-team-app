@@ -58,3 +58,15 @@ class CartService {
 
     if (user == null) throw Exception("User tidak terdeteksi");
     if (_items.isEmpty) throw Exception("Keranjang kosong");
+
+     // --- VALIDASI STOK & PRODUK DIHAPUS ---
+    // Sebelum membuat order, kita cek dulu database apakah barangnya aman.
+    for (var item in _items) {
+      final productData = await supabase
+          .from('products')
+          .select('stock, is_deleted')
+          .eq('id', item.product.id)
+          .single();
+      
+      final bool isDeleted = productData['is_deleted'] ?? false;
+      final int currentStock = productData['stock'] ?? 0;
