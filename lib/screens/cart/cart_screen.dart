@@ -183,3 +183,30 @@ class _CartScreenState extends State<CartScreen> {
                                             _refresh();
 
                                             if (!context.mounted) return;
+
+                                             // 3. Notifikasi Sukses
+                                            ScaffoldMessenger.of(
+                                              context,
+                                            ).showSnackBar(
+                                              const SnackBar(
+                                                content: Text(
+                                                  "🗑️ Barang dihapus dari keranjang",
+                                                ),
+                                                backgroundColor: Colors.black87,
+                                                duration: Duration(seconds: 1),
+                                              ),
+                                            );
+                                          }
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    },
+                  ),
+                ),
