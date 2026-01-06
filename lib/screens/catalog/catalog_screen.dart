@@ -108,3 +108,16 @@ class _CatalogScreenState extends State<CatalogScreen> {
                     crossAxisSpacing: 16,
                     mainAxisSpacing: 16,
                   ),
+                  itemCount: products.length,
+                  itemBuilder: (context, index) {
+                    final product = products[index];
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (_) => ProductDetailScreen(product: product)));
+                      },
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: AppConstants.cardBgColor,
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.white10),
+                        ),
