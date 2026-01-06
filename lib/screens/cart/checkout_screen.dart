@@ -53,3 +53,13 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       if (mounted) setState(() => _isLoading = false);
     }
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      appBar: AppBar(
+        title: const Text("Ringkasan & Pembayaran"), 
+        backgroundColor: AppConstants.primaryColor,
+        iconTheme: const IconThemeData(color: Colors.white),
+      ),
