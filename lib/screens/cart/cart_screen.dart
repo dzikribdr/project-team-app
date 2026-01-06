@@ -60,3 +60,19 @@ class _CartScreenState extends State<CartScreen> {
                 ],
               ),
             )
+            : Column(
+              children: [
+                // LIST ITEM
+                Expanded(
+                  child: ListView.separated(
+                    padding: const EdgeInsets.all(16),
+                    itemCount: items.length,
+                    separatorBuilder: (_, __) => const SizedBox(height: 12),
+                    itemBuilder: (context, index) {
+                      final item = items[index];
+                      return Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: AppConstants.cardBgColor,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
