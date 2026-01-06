@@ -105,3 +105,11 @@ class _CartScreenState extends State<CartScreen> {
                                       color: Colors.white,
                                     ),
                                   ),
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    _formatCurrency(item.product.price),
+                                    style: const TextStyle(
+                                      color: AppConstants.accentColor,
+                                      fontSize: 12,
+                                    ),
+                                  ),
