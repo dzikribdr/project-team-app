@@ -526,3 +526,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               color: Colors.white,
                             ),
                           ),
+                          const SizedBox(height: 4),
+                          Text(
+                            product.stock > 0 ? "Ready Stock" : "Habis",
+                            style: TextStyle(
+                              color: product.stock > 0
+                                  ? Colors.green
+                                  : Colors.red,
+                              fontSize: 10,
+                            ),
+                          ),
