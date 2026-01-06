@@ -205,3 +205,29 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                     ],
                   ),
                 ),
+                const SizedBox(width: 16),
+                
+                // Tombol Add to Cart
+                Expanded(
+                  child: ElevatedButton(
+                    onPressed: isOutOfStock ? null : _addToCart,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppConstants.accentColor,
+                      foregroundColor: Colors.black,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    ),
+                    child: Text(
+                      isOutOfStock ? "STOK HABIS" : "TAMBAH KE KERANJANG",
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
