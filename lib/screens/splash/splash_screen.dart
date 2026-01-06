@@ -23,3 +23,6 @@ class _SplashScreenState extends State<SplashScreen> {
     // 1. Delay 2 detik
     await Future.delayed(const Duration(seconds: 2));
     if (!mounted) return;
+
+    // 2. Cek apakah ada user yang sedang login
+    final session = Supabase.instance.client.auth.currentSession;
