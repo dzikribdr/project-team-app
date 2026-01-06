@@ -157,3 +157,21 @@ class _SplashScreen2State extends State<SplashScreen2> {
                   ),
                 ],
               ),
+
+              // --- 4. AVATAR (FLOATING) ---
+              Positioned(
+                top: 90, // Posisi agar setengah di header, setengah di body
+                child: Container(
+                  width: 114,
+                  height: 114,
+                  decoration: BoxDecoration(
+                    color: Colors.white, // Border putih tebal
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 4,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
