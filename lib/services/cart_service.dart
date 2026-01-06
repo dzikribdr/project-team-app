@@ -12,3 +12,14 @@ class CartService {
   final List<CartItem> _items = [];
 
   List<CartItem> get items => _items;
+
+  // Tambah ke Cart (Standard)
+  void addToCart(Product product, int quantity) {
+    final index = _items.indexWhere((item) => item.product.id == product.id);
+    
+    if (index >= 0) {
+      _items[index].quantity += quantity;
+    } else {
+      _items.add(CartItem(product: product, quantity: quantity));
+    }
+  }
