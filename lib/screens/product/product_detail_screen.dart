@@ -93,3 +93,27 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                         const Center(child: Icon(Icons.broken_image, size: 50, color: Colors.grey)),
                     ),
                   ),
+                  
+                  Container(
+                    padding: const EdgeInsets.all(24),
+                    decoration: const BoxDecoration(
+                      color: AppConstants.primaryColor,
+                      borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+                    ),
+                    transform: Matrix4.translationValues(0.0, -20.0, 0.0), // Efek overlap sedikit
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Nama & Stok
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Expanded(
+                              child: Text(
+                                product.name,
+                                style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
