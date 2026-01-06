@@ -26,3 +26,16 @@ class _SplashScreenState extends State<SplashScreen> {
 
     // 2. Cek apakah ada user yang sedang login
     final session = Supabase.instance.client.auth.currentSession;
+
+    if (session != null) {
+      // ADA USER -> Masuk ke MainScreen (Home)
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => const MainScreen())
+      );
+    } else {
+      // TIDAK ADA USER -> Masuk ke LoginScreen
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(builder: (_) => const LoginScreen())
+      );
+    }
+  }
