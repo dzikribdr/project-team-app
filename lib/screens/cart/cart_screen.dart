@@ -178,3 +178,8 @@ class _CartScreenState extends State<CartScreen> {
                                             _cartService.removeItem(
                                               item.product.id,
                                             );
+
+                                            // Refresh UI
+                                            _refresh();
+
+                                            if (!context.mounted) return;
