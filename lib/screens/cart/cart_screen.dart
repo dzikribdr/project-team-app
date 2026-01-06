@@ -288,3 +288,17 @@ class _CartScreenState extends State<CartScreen> {
     );
   }
 }
+
+// Fungsi Helper (Utils)
+Future<bool> showDeleteConfirmation(
+  BuildContext context, {
+  String title = "Hapus Data?",
+  String message = "Apakah Anda yakin ingin menghapus data ini?",
+}) async {
+  return await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(
+            title,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
