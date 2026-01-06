@@ -119,3 +119,17 @@ class _HomeScreenState extends State<HomeScreen> {
             _buildPromoBanner(),
 
             const SizedBox(height: 24),
+
+            
+            // 5. REKOMENDASI (Vertical List)
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: const Text(
+                "Rekomendasi Untukmu",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
+              ),
+            ),
