@@ -536,3 +536,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontSize: 10,
                             ),
                           ),
+                          const SizedBox(height: 4),
+                          Text(
+                            _formatCurrency(product.price),
+                            style: const TextStyle(
+                              color: AppConstants.accentColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
