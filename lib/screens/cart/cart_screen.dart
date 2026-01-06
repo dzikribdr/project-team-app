@@ -226,3 +226,17 @@ class _CartScreenState extends State<CartScreen> {
                       _buildSummaryRow("Ongkos Kirim", ongkir),
                       const Divider(color: Colors.grey),
                       _buildSummaryRow("Total Pembayaran", total, isBold: true),
+
+                      const SizedBox(height: 16),
+
+                      SizedBox(
+                        width: double.infinity,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (_) => const CheckoutScreen(),
+                              ),
+                            );
+                          },
