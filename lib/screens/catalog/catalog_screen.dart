@@ -38,3 +38,15 @@ class _CatalogScreenState extends State<CatalogScreen> {
     if (_selectedCategoryId != 0) {
       query = query.eq('category_id', _selectedCategoryId);
     }
+
+    final response = await query.order('created_at', ascending: false);
+    final data = response as List<dynamic>;
+    return data.map((json) => Product.fromJson(json)).toList();
+  }
+
+  // Format Rupiah
+  String _formatCurrency(double price) {
+    return NumberFormat.currency(
+      locale: 'id_ID', symbol: 'Rp ', decimalDigits: 0
+    ).format(price);
+  }
