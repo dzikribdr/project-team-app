@@ -210,3 +210,19 @@ class _CartScreenState extends State<CartScreen> {
                     },
                   ),
                 ),
+
+                // CHECKOUT SECTION
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: const BoxDecoration(
+                    color: AppConstants.cardBgColor,
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(20),
+                    ),
+                  ),
+                  child: Column(
+                    children: [
+                      _buildSummaryRow("Subtotal", subtotal),
+                      _buildSummaryRow("Ongkos Kirim", ongkir),
+                      const Divider(color: Colors.grey),
+                      _buildSummaryRow("Total Pembayaran", total, isBold: true),
