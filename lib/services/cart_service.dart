@@ -104,3 +104,8 @@ class CartService {
     }).toList();
 
     await supabase.from('order_items').insert(orderItemsData);
+
+     // 3. Bersihkan Cart Lokal
+    clearCart();
+  }
+}
