@@ -28,3 +28,17 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
     {'id': 2, 'name': 'Liquid'},
     {'id': 3, 'name': 'Accessories'},
   ];
+
+  // --- FILTER PRODUK YANG DIHAPUS ---
+  Stream<List<Product>> _getProductsStream() {
+    return _supabase
+        .from('products')
+        .stream(primaryKey: ['id'])
+        .order('created_at')
+        .map(
+          (data) => data
+              .where((json) => json['is_deleted'] != true) // <--- INI PENTING
+              .map((json) => Product.fromJson(json))
+              .toList(),
+        );
+  }
