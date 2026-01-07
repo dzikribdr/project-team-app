@@ -26,6 +26,7 @@ class _AdminOrdersScreenState extends State<AdminOrdersScreen> {
       default: return Colors.orange;
     }
   }
+  
    @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,3 +38,12 @@ class _AdminOrdersScreenState extends State<AdminOrdersScreen> {
           if (!snapshot.hasData) return const Center(child: Text("Belum ada order", style: TextStyle(color: Colors.grey)));
           
           final orders = snapshot.data as List;
+
+          return ListView.builder(
+            padding: const EdgeInsets.all(8),
+            itemCount: orders.length,
+            itemBuilder: (context, index) {
+              final order = orders[index];
+              final user = order['users'] != null ? order['users']['full_name'] : 'Unknown User';
+              final status = order['status'];
+              final total = NumberFormat.currency(locale: 'id_ID', symbol: 'Rp ', decimalDigits: 0).format(order['total']);
