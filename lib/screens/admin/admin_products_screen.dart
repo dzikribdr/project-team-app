@@ -56,3 +56,21 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
       });
     }
   }
+
+    Future<String?> _uploadImage(Uint8List bytes, String extension) async {
+    try {
+      final fileName = '${DateTime.now().millisecondsSinceEpoch}.$extension';
+      final path = 'uploads/$fileName';
+      await _supabase.storage
+          .from('products')
+          .uploadBinary(
+            path,
+            bytes,
+            fileOptions: FileOptions(contentType: 'image/$extension'),
+          );
+      return _supabase.storage.from('products').getPublicUrl(path);
+    } catch (e) {
+      debugPrint("Upload Error: $e");
+      return null;
+    }
+  }
