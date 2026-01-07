@@ -11,3 +11,10 @@ class AdminProductsScreen extends StatefulWidget {
   @override
   State<AdminProductsScreen> createState() => _AdminProductsScreenState();
 }
+
+class _AdminProductsScreenState extends State<AdminProductsScreen> {
+  final _supabase = Supabase.instance.client;
+
+  Uint8List? _imageBytes;
+  String? _imageExtension;
+  bool _isUploading = false;
