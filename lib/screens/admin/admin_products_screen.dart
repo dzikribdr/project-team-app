@@ -18,3 +18,13 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
   Uint8List? _imageBytes;
   String? _imageExtension;
   bool _isUploading = false;
+
+// VARIABLE UNTUK KATEGORI
+  int _selectedCategoryId = 1;
+
+  // List Kategori Manual
+  final List<Map<String, dynamic>> _categories = [
+    {'id': 1, 'name': 'Device'},
+    {'id': 2, 'name': 'Liquid'},
+    {'id': 3, 'name': 'Accessories'},
+  ];
