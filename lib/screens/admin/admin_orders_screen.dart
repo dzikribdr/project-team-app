@@ -103,3 +103,17 @@ class _AdminOrdersScreenState extends State<AdminOrdersScreen> {
       ),
     );
   }
+
+ Widget _statusBtn(int id, String status, Color color) {
+    return InkWell(
+      onTap: () => _updateStatus(id, status),
+      child: Column(
+        children: [
+          Icon(Icons.circle, color: color, size: 20),
+          const SizedBox(height: 4),
+          Text(status, style: TextStyle(color: color, fontSize: 10))
+        ],
+      ),
+    );
+  }
+}
