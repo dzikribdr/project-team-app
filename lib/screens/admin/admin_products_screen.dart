@@ -125,4 +125,49 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
             title: Text(
               product == null ? "Tambah Produk" : "Edit Produk",
               style: const TextStyle(color: Colors.white),
-            ),
+            ),           
+            content: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // --- GAMBAR ---
+                  GestureDetector(
+                    onTap: () async {
+                      await _pickImage();
+                      setDialogState(() {});
+                    },
+                    child: Container(
+                      height: 150,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: Colors.grey[800],
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: Colors.grey),
+                      ),
+                      child: _imageBytes != null
+                          ? ClipRRect(
+                              borderRadius: BorderRadius.circular(12),
+                              child: Image.memory(
+                                _imageBytes!,
+                                fit: BoxFit.cover,
+                              ),
+                            )
+                          : (currentImageUrl.isNotEmpty
+                                ? ClipRRect(
+                                    borderRadius: BorderRadius.circular(12),
+                                    child: Image.network(
+                                      currentImageUrl,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  )
+                                : const Center(
+                                    child: Icon(
+                                      Icons.add_a_photo,
+                                      color: Colors.white,
+                                      size: 40,
+                                    ),
+                                  )),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
