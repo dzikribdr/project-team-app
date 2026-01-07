@@ -26,3 +26,14 @@ class _AdminOrdersScreenState extends State<AdminOrdersScreen> {
       default: return Colors.orange;
     }
   }
+   @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      body: FutureBuilder(
+        future: _supabase.from('orders').select('*, users(full_name)').order('created_at', ascending: false),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
+          if (!snapshot.hasData) return const Center(child: Text("Belum ada order", style: TextStyle(color: Colors.grey)));
+          
+          final orders = snapshot.data as List;
