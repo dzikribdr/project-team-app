@@ -299,3 +299,99 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
       ),
     );
   }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: AppConstants.primaryColor,
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: AppConstants.accentColor,
+        onPressed: () => _showFormDialog(),
+        child: const Icon(Icons.add, color: Colors.black),
+      ),
+      body: StreamBuilder<List<Product>>(
+        stream: _getProductsStream(),
+        builder: (context, snapshot) {
+          if (snapshot.connectionState == ConnectionState.waiting) {
+            return const Center(child: CircularProgressIndicator());
+          }
+          if (snapshot.hasError) {
+            return Center(
+              child: Text(
+                "Error: ${snapshot.error}",
+                style: const TextStyle(color: Colors.white),
+              ),
+            );
+          }
+          if (!snapshot.hasData || snapshot.data!.isEmpty) {
+            return const Center(
+              child: Text(
+                "Belum ada produk",
+                style: TextStyle(color: Colors.white),
+              ),
+            );
+          }
+
+          final products = snapshot.data!;
+
+          return ListView.separated(
+            padding: const EdgeInsets.all(8),
+            itemCount: products.length,
+            separatorBuilder: (_, __) => const SizedBox(height: 8),
+            itemBuilder: (context, index) {
+              final product = products[index];
+
+              return Card(
+                color: AppConstants.cardBgColor,
+                child: ListTile(
+                  leading: ClipRRect(
+                    borderRadius: BorderRadius.circular(4),
+                    child: Image.network(
+                      product.imageUrl,
+                      width: 50,
+                      height: 50,
+                      fit: BoxFit.cover,
+                      errorBuilder: (_, __, ___) => const Icon(Icons.image),
+                    ),
+                  ),
+                  title: Text(
+                    product.name,
+                    style: const TextStyle(color: Colors.white),
+                  ),
+                  subtitle: Text(
+                    _categories
+                        .firstWhere(
+                          (c) => c['id'] == product.categoryId,
+                          orElse: () => {'name': '-'},
+                        )['name']
+                        .toString(),
+                    style: const TextStyle(color: AppConstants.accentColor),
+                  ),
+                  trailing: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      IconButton(
+                        icon: const Icon(Icons.edit, color: Colors.blue),
+                        onPressed: () => _showFormDialog(product: product),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.delete, color: Colors.red),
+                        onPressed: () async {
+                          // Memanggil fungsi helper di bawah
+                          final confirm = await showDeleteConfirmation(context);
+                          if (confirm) {
+                            _deleteProduct(product.id);
+                          }
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
