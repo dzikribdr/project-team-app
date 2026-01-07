@@ -26,7 +26,7 @@ class _AdminOrdersScreenState extends State<AdminOrdersScreen> {
       default: return Colors.orange;
     }
   }
-  
+
    @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,3 +47,59 @@ class _AdminOrdersScreenState extends State<AdminOrdersScreen> {
               final user = order['users'] != null ? order['users']['full_name'] : 'Unknown User';
               final status = order['status'];
               final total = NumberFormat.currency(locale: 'id_ID', symbol: 'Rp ', decimalDigits: 0).format(order['total']);
+
+              return Card(
+                color: AppConstants.cardBgColor,
+                margin: const EdgeInsets.only(bottom: 12),
+                child: ExpansionTile(
+                  iconColor: Colors.white,
+                  collapsedIconColor: Colors.grey,
+                  title: Text("Order #${order['id']} - $user", style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                  subtitle: Padding(
+                    padding: const EdgeInsets.only(top: 4.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(total, style: const TextStyle(color: AppConstants.accentColor)),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: _getStatusColor(status).withValues(alpha: 0.2),
+                            borderRadius: BorderRadius.circular(4),
+                            border: Border.all(color: _getStatusColor(status))
+                          ),
+                          child: Text(status.toUpperCase(), style: TextStyle(color: _getStatusColor(status), fontSize: 10, fontWeight: FontWeight.bold)),
+                        )
+                      ],
+                    ),
+                  ),
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      color: Colors.black12,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text("Ubah Status:", style: TextStyle(color: Colors.grey, fontSize: 12)),
+                          const SizedBox(height: 8),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              _statusBtn(order['id'], 'pending', Colors.orange),
+                              _statusBtn(order['id'], 'shipped', Colors.blue),
+                              _statusBtn(order['id'], 'completed', Colors.green),
+                              _statusBtn(order['id'], 'cancelled', Colors.red),
+                            ],
+                          ),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
