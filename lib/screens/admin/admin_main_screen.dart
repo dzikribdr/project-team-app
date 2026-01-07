@@ -30,3 +30,17 @@ class _AdminMainScreenState extends State<AdminMainScreen> {
       (route) => false,
     );
   }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Admin Dashboard"),
+        backgroundColor: AppConstants.primaryColor,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout, color: Colors.red), 
+            onPressed: _logout,
+            tooltip: "Logout Admin",
+          )
+        ],
+      ),
