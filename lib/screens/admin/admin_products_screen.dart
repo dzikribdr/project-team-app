@@ -171,3 +171,107 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
                     ),
                   ),
                   const SizedBox(height: 16),
+                  
+                  // --- INPUT FIELDS ---
+                  _buildField(nameCtrl, "Nama Produk"),
+
+                  // DROPDOWN KATEGORI
+                  const Text(
+                    "Kategori",
+                    style: TextStyle(color: Colors.grey, fontSize: 12),
+                  ),
+                  DropdownButtonFormField<int>(
+                    value: _selectedCategoryId,
+                    dropdownColor: AppConstants.cardBgColor,
+                    style: const TextStyle(color: Colors.white),
+                    decoration: const InputDecoration(
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey),
+                      ),
+                    ),
+                    items: _categories.map((cat) {
+                      return DropdownMenuItem<int>(
+                        value: cat['id'],
+                        child: Text(cat['name']),
+                      );
+                    }).toList(),
+                    onChanged: (val) {
+                      if (val != null)
+                        setDialogState(() => _selectedCategoryId = val);
+                    },
+                  ),
+                  const SizedBox(height: 8),
+
+                  _buildField(priceCtrl, "Harga", isNumber: true),
+                  _buildField(stockCtrl, "Stok", isNumber: true),
+                  _buildField(descCtrl, "Deskripsi", maxLines: 3),
+                ],
+              ),
+            ),
+            actions: [
+              TextButton(
+                onPressed: _isUploading ? null : () => Navigator.pop(context),
+                child: const Text("Batal"),
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppConstants.accentColor,
+                ),
+                onPressed: _isUploading
+                    ? null
+                    : () async {
+                        setDialogState(() => _isUploading = true);
+                        String finalImageUrl = currentImageUrl;
+
+                        if (_imageBytes != null) {
+                          final url = await _uploadImage(
+                            _imageBytes!,
+                            _imageExtension ?? 'jpg',
+                          );
+                          if (url != null) finalImageUrl = url;
+                        }
+
+                        final data = {
+                          'name': nameCtrl.text,
+                          'price': double.tryParse(priceCtrl.text) ?? 0,
+                          'stock': int.tryParse(stockCtrl.text) ?? 0,
+                          'image_url': finalImageUrl,
+                          'description': descCtrl.text,
+                          'category_id': _selectedCategoryId,
+                          // Pastikan saat insert baru, is_deleted false
+                          if (product == null) 'is_deleted': false,
+                        };
+
+                        try {
+                          if (product == null) {
+                            await _supabase.from('products').insert(data);
+                          } else {
+                            await _supabase
+                                .from('products')
+                                .update(data)
+                                .eq('id', product.id);
+                          }
+                          if (mounted) Navigator.pop(context);
+                        } catch (e) {
+                          debugPrint("DB Error: $e");
+                        } finally {
+                          setDialogState(() => _isUploading = false);
+                        }
+                      },
+                child: _isUploading
+                    ? const SizedBox(
+                        height: 16,
+                        width: 16,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
+                    : const Text(
+                        "Simpan",
+                        style: TextStyle(color: Colors.black),
+                      ),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
