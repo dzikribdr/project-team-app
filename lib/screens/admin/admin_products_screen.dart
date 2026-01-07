@@ -395,3 +395,37 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
     );
   }
 }
+
+// --- GLOBAL HELPER FUNCTION (Ditambahkan kembali) ---
+Future<bool> showDeleteConfirmation(
+  BuildContext context, {
+  String title = "Hapus Data?",
+  String message =
+      "Apakah Anda yakin ingin menghapus data ini? Tindakan ini tidak dapat dibatalkan.",
+}) async {
+  return await showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text(
+            title,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          content: Text(message),
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(context, false),
+              child: const Text("Batal", style: TextStyle(color: Colors.grey)),
+            ),
+            ElevatedButton(
+              onPressed: () => Navigator.pop(context, true),
+              style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+              child: const Text("Hapus", style: TextStyle(color: Colors.white)),
+            ),
+          ],
+        ),
+      ) ??
+      false;
+}
