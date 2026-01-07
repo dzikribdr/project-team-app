@@ -100,3 +100,29 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
       ).showSnackBar(SnackBar(content: Text("Gagal menghapus: $e")));
     }
   }
+   
+    void _showFormDialog({Product? product}) {
+    _imageBytes = null;
+    _imageExtension = null;
+    _isUploading = false;
+
+    // Set Kategori Awal
+    _selectedCategoryId = product?.categoryId ?? 1;
+
+    final nameCtrl = TextEditingController(text: product?.name);
+    final priceCtrl = TextEditingController(text: product?.price.toString());
+    final stockCtrl = TextEditingController(text: product?.stock.toString());
+    final descCtrl = TextEditingController(text: product?.description);
+    String currentImageUrl = product?.imageUrl ?? '';
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (context) => StatefulBuilder(
+        builder: (context, setDialogState) {
+          return AlertDialog(
+            backgroundColor: AppConstants.cardBgColor,
+            title: Text(
+              product == null ? "Tambah Produk" : "Edit Produk",
+              style: const TextStyle(color: Colors.white),
+            ),
