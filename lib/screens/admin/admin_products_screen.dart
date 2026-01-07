@@ -275,3 +275,27 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
       ),
     );
   }
+
+  Widget _buildField(
+    TextEditingController ctrl,
+    String label, {
+    bool isNumber = false,
+    int maxLines = 1,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8.0),
+      child: TextField(
+        controller: ctrl,
+        keyboardType: isNumber ? TextInputType.number : TextInputType.text,
+        maxLines: maxLines,
+        style: const TextStyle(color: Colors.white),
+        decoration: InputDecoration(
+          labelText: label,
+          labelStyle: const TextStyle(color: Colors.grey),
+          enabledBorder: const UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.grey),
+          ),
+        ),
+      ),
+    );
+  }
