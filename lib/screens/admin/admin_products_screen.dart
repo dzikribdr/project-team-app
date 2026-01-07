@@ -74,3 +74,29 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
       return null;
     }
   }
+
+    // --- FUNGSI DELETE (SOFT DELETE) ---
+  Future<void> _deleteProduct(int productId) async {
+    try {
+      // KITA TIDAK MENGHAPUS BARIS, TAPI CUMA UPDATE STATUS JADI 'DIHAPUS'
+      await _supabase
+          .from('products')
+          .update({'is_deleted': true})
+          .eq('id', productId);
+
+      if (!mounted) return;
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text("Produk berhasil dihapus (disembunyikan)"),
+        ),
+      );
+
+      // Tidak perlu setState manual jika kamu pakai StreamBuilder yang sudah difilter
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text("Gagal menghapus: $e")));
+    }
+  }
