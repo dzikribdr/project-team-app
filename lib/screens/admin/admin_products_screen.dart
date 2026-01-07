@@ -42,3 +42,17 @@ class _AdminProductsScreenState extends State<AdminProductsScreen> {
               .toList(),
         );
   }
+
+    Future<void> _pickImage() async {
+    final ImagePicker picker = ImagePicker();
+    final XFile? image = await picker.pickImage(source: ImageSource.gallery);
+    if (image != null) {
+      final bytes = await image.readAsBytes();
+      final name = image.name;
+      final ext = name.split('.').last;
+      setState(() {
+        _imageBytes = bytes;
+        _imageExtension = ext;
+      });
+    }
+  }
