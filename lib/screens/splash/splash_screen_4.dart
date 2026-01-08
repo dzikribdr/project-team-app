@@ -88,3 +88,20 @@ class MySplashScreen2 extends StatelessWidget {
                           const SizedBox(height: 20),
 
                           // Nama Satu Baris (Evan Alfeus Hendri) dengan Desain Berbeda
+                          Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+  children: [
+    // EVAN (Stroke Style - Dibuat lebih soft/redup)
+    Stack(
+      children: [
+        Text(
+          "Evan",
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            foreground: Paint()
+              ..style = PaintingStyle.stroke
+              ..strokeWidth = 1.2 // Garis diperhalus
+              ..color = const Color.fromARGB(255, 9, 247, 235).withOpacity(0.4), // Opacity diturunkan jadi 0.4
+          ),
+        ),
