@@ -152,3 +152,16 @@ class MySplashScreen2 extends StatelessWidget {
     ),
   ],
 ),
+const SizedBox(height: 10),
+
+                          // TI23SE1
+                          const Text(
+                            "TI23SE1",
+                            style: TextStyle(
+                              fontSize: 26,
+                              color: Colors.amber,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2,
+                            ),
+                          ),
+                          const SizedBox(height: 15),
