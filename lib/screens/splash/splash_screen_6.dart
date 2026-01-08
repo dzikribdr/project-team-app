@@ -40,3 +40,22 @@ class SplashScreen6 extends StatelessWidget {
                     color: Colors.white,
                   ),
                 ),
+                 const SizedBox(height: 10),
+                const Text(
+                  "Premium Vape Store Experience",
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 14,
+                  ),
+                ),
+                const SizedBox(height: 48),
+                SizedBox(
+                  width: double.infinity,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppConstants.cyanColor,
+                      padding: const EdgeInsets.symmetric(vertical: 16),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(14),
+                      ),
+                    ),
