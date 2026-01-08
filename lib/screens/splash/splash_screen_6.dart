@@ -19,3 +19,24 @@ class SplashScreen6 extends StatelessWidget {
             end: Alignment.bottomCenter,
           ),
         ),
+        child: Center(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 32),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.cloud,
+                  size: 120,
+                  color: AppConstants.cyanColor,
+                ),
+                const SizedBox(height: 24),
+                const Text(
+                  "VAPE VIOLENCE",
+                  style: TextStyle(
+                    fontSize: 28,
+                    letterSpacing: 3,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
