@@ -189,3 +189,16 @@ const SizedBox(height: 10),
                               ),
                             ),
                           ),
+                          const SizedBox(height: 25),
+
+                          // TI23SE1
+                          const Text(
+                            "Belajar flutter",
+                            style: TextStyle(
+                              fontSize: 26,
+                              color: Colors.amber,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 2,
+                            ),
+                          ),
+                          const SizedBox(height: 15),
