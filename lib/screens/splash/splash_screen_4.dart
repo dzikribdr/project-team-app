@@ -241,3 +241,17 @@ const SizedBox(height: 10),
                 ),
 
                 const SizedBox(height: 30),
+
+                // Button Gasken Continue (Full Width)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25),
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const MySplashScreen3()),
+                        );
+                      },
