@@ -78,12 +78,12 @@ class _SplashScreen2State extends State<SplashScreen2> {
                           ],
                         ),
                       ),
-                       // Opsional: Tambah Pattern overlay jika mau (pake Image.asset transparan)
+                      // Opsional: Tambah Pattern overlay jika mau (pake Image.asset transparan)
                       child: const Icon(Icons.school, size: 80, color: Colors.white24), 
                     ),
                   ),
 
-                   // --- SPACING UNTUK AVATAR ---
+                  // --- SPACING UNTUK AVATAR ---
                   const SizedBox(height: 60), // Memberi ruang karena avatar menumpuk
 
                   // --- 2. TEXT CONTENT ---
@@ -97,7 +97,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                     ),
                   ),
                   const SizedBox(height: 8),
-
+                  
                   // Subtitle: NIM & Jurusan
                   const Text(
                     "NIM: 1123150054",
@@ -114,7 +114,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                     style: TextStyle(fontSize: 13, color: Color(0xFF78858F)),
                   ),
 
-                   const SizedBox(height: 24),
+                  const SizedBox(height: 24),
 
                   // --- 3. BUTTONS ---
                   Padding(
@@ -135,7 +135,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                             child: const Text("INFO", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                           ),
                         ),
-
+                        
                         const SizedBox(width: 12),
 
                         // Tombol 2: Solid (Lanjut Login)
@@ -175,7 +175,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
                       ),
                     ],
                   ),
-                   padding: const EdgeInsets.all(6), // Padding untuk border putih
+                  padding: const EdgeInsets.all(6), // Padding untuk border putih
                   child: const CircleAvatar(
                     backgroundImage: AssetImage('assets/images/foto_mahasiswa.jpg'),
                     backgroundColor: Colors.grey, // Placeholder warna jika foto gagal
