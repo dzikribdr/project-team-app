@@ -28,3 +28,20 @@ class SplashScreen3 extends StatelessWidget {
                   ),
             ),
            ),
+                      Text(
+              'hawooo gaisss >_<',
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.bold,
+                color: const Color.fromARGB(255, 228, 173, 191),
+              ),
+            ),
+                  SizedBox(height: 10,),
+                   Text('bertemu lagi dengan pibraaa >u< ',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.normal,
+                      color: const Color.fromARGB(255, 250, 184, 179)
+                    ),
+                  ),
