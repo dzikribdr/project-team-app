@@ -277,3 +277,16 @@ const SizedBox(height: 10),
       ),
     );
   }
+
+  // Helper untuk membuat dot indicator yang modern
+  Widget _buildDot(bool isActive) {
+    return Container(
+      width: isActive ? 25 : 10,
+      height: 10,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: isActive ? Colors.amber : Colors.grey,
+      ),
+    );
+  }
+}
