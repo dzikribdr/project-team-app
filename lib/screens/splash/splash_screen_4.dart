@@ -116,3 +116,14 @@ class MySplashScreen2 extends StatelessWidget {
       ],
     ),
     const SizedBox(width: 8),
+
+     // ALFEUS (Polos - Putih Tulang agar tidak terlalu kontras)
+    const Text(
+      "Alfeus",
+      style: TextStyle(
+        fontSize: 24,
+        color: Colors.white70, 
+        fontWeight: FontWeight.w300,
+      ),
+    ),
+    const SizedBox(width: 8),
