@@ -127,3 +127,28 @@ class MySplashScreen2 extends StatelessWidget {
       ),
     ),
     const SizedBox(width: 8),
+
+     // HENDRI (Modern Border - Tetap Cyan tapi tipis)
+    Container(
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: const Color.fromARGB(255, 9, 247, 235).withOpacity(0.5), 
+          width: 1
+        ),
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(10),
+          bottomRight: Radius.circular(10),
+        ),
+      ),
+      child: const Text(
+        "Hendri",
+        style: TextStyle(
+          fontSize: 24,
+          color: Color.fromARGB(255, 9, 247, 235),
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    ),
+  ],
+),
