@@ -24,3 +24,20 @@ class MySplashScreen2 extends StatelessWidget {
               ),
             ),
           ),
+
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 40),
+                // Title Tetap Sesuai Kode Awal
+                const Text(
+                  'PROFILE MAHASISWA',
+                  style: TextStyle(
+                    fontFamily: 'Montserrat',
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.amber,
+                  ),
+                ),
+                const SizedBox(height: 20),
