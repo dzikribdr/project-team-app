@@ -225,3 +225,19 @@ const SizedBox(height: 10),
                     ),
                   ),
                 ),
+
+                const SizedBox(height: 20),
+
+                // Indikator Dots
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _buildDot(true),
+                    const SizedBox(width: 8),
+                    _buildDot(false),
+                    const SizedBox(width: 8),
+                    _buildDot(false),
+                  ],
+                ),
+
+                const SizedBox(height: 30),
