@@ -21,4 +21,19 @@ class AdminUsersScreen extends StatelessWidget {
             separatorBuilder: (_,__) => const Divider(color: Colors.grey),
             itemBuilder: (context, index) {
               final user = users[index];
-              
+              return ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: AppConstants.accentColor,
+                  child: Text(user['full_name']?[0] ?? 'U', style: const TextStyle(color: Colors.black)),
+                ),
+                title: Text(user['full_name'] ?? 'No Name', style: const TextStyle(color: Colors.white)),
+                subtitle: Text("${user['email']}\nRole: ${user['role']}", style: const TextStyle(color: Colors.grey)),
+                isThreeLine: true,
+              );
+            },
+          );
+        },
+      ),
+    );
+  }
+}
