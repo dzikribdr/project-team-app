@@ -105,3 +105,14 @@ class MySplashScreen2 extends StatelessWidget {
               ..color = const Color.fromARGB(255, 9, 247, 235).withOpacity(0.4), // Opacity diturunkan jadi 0.4
           ),
         ),
+        Text(
+          "Evan",
+          style: TextStyle(
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+            color: const Color.fromARGB(255, 9, 247, 235).withOpacity(0.1), // Isi teks sangat samar
+          ),
+        ),
+      ],
+    ),
+    const SizedBox(width: 8),
