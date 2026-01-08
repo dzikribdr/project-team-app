@@ -76,3 +76,15 @@ class MySplashScreen2 extends StatelessWidget {
                                 ),
                               ],
                             ),
+                            child: const CircleAvatar(
+                              radius: 64,
+                              backgroundColor: Colors.black,
+                              child: CircleAvatar(
+                                radius: 60,
+                                backgroundImage: AssetImage("../assets/image/vans.jpeg"),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 20),
+
+                          // Nama Satu Baris (Evan Alfeus Hendri) dengan Desain Berbeda
