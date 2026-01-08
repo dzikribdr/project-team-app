@@ -58,3 +58,21 @@ class MySplashScreen2 extends StatelessWidget {
                           width: 1.5,
                         ),
                       ),
+                       child: Column(
+                        children: [
+                          // Foto dengan Ring Glow
+                          Container(
+                            padding: const EdgeInsets.all(4),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              gradient: const LinearGradient(
+                                colors: [Colors.cyanAccent, Colors.amber],
+                              ),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.cyanAccent.withOpacity(0.3),
+                                  blurRadius: 15,
+                                  spreadRadius: 2,
+                                ),
+                              ],
+                            ),
