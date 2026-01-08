@@ -13,7 +13,7 @@ class _SplashScreen2State extends State<SplashScreen2> {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 3), () {
+    Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const SplashScreen3()),
@@ -23,16 +23,28 @@ class _SplashScreen2State extends State<SplashScreen2> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
-        child: Text(
-          "VAPE VIOLENCE",
-          style: TextStyle(
-            fontSize: 32,
-            color: Colors.white,
-            letterSpacing: 3,
-            fontWeight: FontWeight.bold,
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            colors: [Colors.black, Color(0xFF0F2027)],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ),
+        ),
+        child: Center(
+          child: Text(
+            "VAPE\nVIOLENCE",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontSize: 36,
+              letterSpacing: 4,
+              fontWeight: FontWeight.bold,
+              color: Colors.white.withOpacity(0.9),
+              shadows: const [
+                Shadow(color: Colors.cyanAccent, blurRadius: 20),
+              ],
+            ),
           ),
         ),
       ),
