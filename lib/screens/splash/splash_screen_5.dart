@@ -20,3 +20,23 @@ class _SplashScreen5State extends State<SplashScreen5> {
       );
     });
   }
+
+   @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      backgroundColor: Colors.black,
+      body: Center(
+        child: Text(
+          "Not Just Vape.\nIt’s a Culture.",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            fontSize: 24,
+            height: 1.4,
+            fontWeight: FontWeight.w500,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
+}
