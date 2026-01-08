@@ -165,3 +165,27 @@ const SizedBox(height: 10),
                             ),
                           ),
                           const SizedBox(height: 15),
+
+                           // NIM dengan Neon Border
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(color: Colors.amber.withOpacity(0.6)),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.amber.withOpacity(0.1),
+                                  blurRadius: 8,
+                                ),
+                              ],
+                            ),
+                            child: const Text(
+                              "1123150186",
+                              style: TextStyle(
+                                fontSize: 24,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                letterSpacing: 2,
+                              ),
+                            ),
+                          ),
