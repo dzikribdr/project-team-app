@@ -14,3 +14,11 @@ class AdminUsersScreen extends StatelessWidget {
         builder: (context, snapshot) {
           if (!snapshot.hasData) return const Center(child: CircularProgressIndicator());
           final users = snapshot.data as List;
+
+          return ListView.separated(
+            padding: const EdgeInsets.all(8),
+            itemCount: users.length,
+            separatorBuilder: (_,__) => const Divider(color: Colors.grey),
+            itemBuilder: (context, index) {
+              final user = users[index];
+              
