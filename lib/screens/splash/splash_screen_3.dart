@@ -44,4 +44,68 @@ class SplashScreen3 extends StatelessWidget {
                       fontWeight: FontWeight.normal,
                       color: const Color.fromARGB(255, 250, 184, 179)
                     ),
+                  ),    
+                  SizedBox(height: 30,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 10,
+                        height: 10,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.grey
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        width: 10,
+                        height: 10,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.grey
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        width: 10,
+                        height: 10,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: const Color.fromARGB(255, 250, 184, 179)
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                    ],
                   ),
+                  SizedBox(height: 70,),
+                  Container(
+                    child: SizedBox(
+                      height: 30,
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color.fromARGB(255, 250, 184, 179)
+                        ),
+                        child: Text(' Continue',
+                        style: TextStyle(
+                          color: Colors.white
+                        ),),
+                        
+                      ),
+                    ),
+                  ),
+                  Spacer(),
+
+          ],
+          //2. buat title welcome
+          //3 buat subtitle
+          //4. buat buletan kecil ada 3 melebar
+          //5. buat button "continue dengan warna putih"
+
+        ),
+      )
+      
+    );
+  }
+}
