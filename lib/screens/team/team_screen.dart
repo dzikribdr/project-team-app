@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_jasun/core/constants.dart';
+import 'package:project_jasun/screens/team/team_detail_screen.dart';
 
 class TeamScreen extends StatelessWidget {
   const TeamScreen({super.key});
@@ -10,10 +11,7 @@ class TeamScreen extends StatelessWidget {
     final List<Map<String, String>> members = [
       {'name': 'Beryl Rafly Agatha', 'nim': '1123150088'},
       {'name': 'Dandi Taufiqurrahman', 'nim': '1123150054'},
-      {
-        'name': 'Dzikri Abdurrahman Haris',
-        'nim': '1123150049',
-      }, // NIM disesuaikan
+      {'name': 'Dzikri Abdurrahman Haris', 'nim': '1123150049'},
       {'name': 'Evan Alfeus Hendrik', 'nim': '1123150186'},
       {'name': 'Vibra Ayu Kharisma', 'nim': '1123150115'},
     ];
@@ -24,13 +22,13 @@ class TeamScreen extends StatelessWidget {
         title: const Text("Data Kelompok"),
         backgroundColor: AppConstants.primaryColor,
         elevation: 0,
-        automaticallyImplyLeading: false, // Hilangkan tombol back
+        automaticallyImplyLeading: false,
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
-            // --- HEADER JURUSAN ---
+            // ================= HEADER =================
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(20),
@@ -70,6 +68,8 @@ class TeamScreen extends StatelessWidget {
             ),
 
             const SizedBox(height: 24),
+
+            // ================= TITLE =================
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -83,7 +83,7 @@ class TeamScreen extends StatelessWidget {
             ),
             const SizedBox(height: 12),
 
-            // --- LIST ANGGOTA ---
+            // ================= LIST MEMBER =================
             ...members.map(
               (member) => Container(
                 margin: const EdgeInsets.only(bottom: 12),
@@ -93,10 +93,22 @@ class TeamScreen extends StatelessWidget {
                   border: Border.all(color: Colors.white10),
                 ),
                 child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => TeamDetailScreen(
+                          name: member['name']!,
+                          nim: member['nim']!,
+                        ),
+                      ),
+                    );
+                  },
                   leading: CircleAvatar(
-                    backgroundColor: AppConstants.accentColor.withOpacity(0.2),
+                    backgroundColor:
+                        AppConstants.accentColor.withOpacity(0.2),
                     child: Text(
-                      member['name']![0], // Ambil huruf depan nama
+                      member['name']![0],
                       style: const TextStyle(
                         color: AppConstants.accentColor,
                         fontWeight: FontWeight.bold,
@@ -113,6 +125,11 @@ class TeamScreen extends StatelessWidget {
                   subtitle: Text(
                     "NIM: ${member['nim']}",
                     style: const TextStyle(color: Colors.grey),
+                  ),
+                  trailing: const Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.white54,
+                    size: 16,
                   ),
                 ),
               ),
