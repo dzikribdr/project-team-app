@@ -2,14 +2,14 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:project_jasun/screens/auth/login_screen.dart';
 
-class SplashScreen6 extends StatefulWidget {
-  const SplashScreen6({super.key});
+class DetailBerylScreen extends StatefulWidget {
+  const DetailBerylScreen({super.key});
 
   @override
-  State<SplashScreen6> createState() => _SplashScreen6State();
+  State<DetailBerylScreen> createState() => _DetailBerylScreenState();
 }
 
-class _SplashScreen6State extends State<SplashScreen6> {
+class _DetailBerylScreenState extends State<DetailBerylScreen> {
   Timer? _timer;
 
   @override
@@ -96,7 +96,7 @@ class _SplashScreen6State extends State<SplashScreen6> {
                         ),
                       ],
                       image: const DecorationImage(
-                        image: AssetImage('assets/images/foto_mahasiswa.jpg'),
+                        image: AssetImage('assets/images/beryl.jpeg'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -164,7 +164,7 @@ class _SplashScreen6State extends State<SplashScreen6> {
                     width: double.infinity,
                     height: 60,
                     child: ElevatedButton(
-                      onPressed: _navigateToLogin,
+                      onPressed: () => Navigator.pop(context),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: textWhite, // Tombol Putih
                         foregroundColor: bgPrimary, // Teks Hijau
@@ -177,7 +177,7 @@ class _SplashScreen6State extends State<SplashScreen6> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: const [
                           Text(
-                            "Get Started",
+                            "Kembali",
                             style: TextStyle(
                               fontSize: 18,
                               fontWeight: FontWeight.bold,

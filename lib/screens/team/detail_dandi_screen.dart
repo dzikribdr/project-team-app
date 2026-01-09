@@ -160,7 +160,7 @@ class DetailDandiScreen extends StatelessWidget {
                       ),
                       padding: const EdgeInsets.all(6),
                       child: const CircleAvatar(
-                        backgroundImage: AssetImage('assets/images/imagedandi.png'),
+                        backgroundImage: AssetImage('assets/images/dandi.jpeg'),
                         backgroundColor: Colors.grey,
                       ),
                     ),
