@@ -132,7 +132,7 @@ class _ProfileAvatar extends StatelessWidget {
       child: const CircleAvatar(
         radius: 64,
         backgroundColor: Colors.black,
-        backgroundImage: AssetImage("assets/images/imagevan.png"),
+        backgroundImage: AssetImage("assets/images/evan.jpeg"),
       ),
     );
   }
@@ -155,10 +155,7 @@ class _ProfileName extends StatelessWidget {
           ),
         ),
         SizedBox(width: 8),
-        Text(
-          "Alfeus",
-          style: TextStyle(fontSize: 24, color: Colors.white70),
-        ),
+        Text("Alfeus", style: TextStyle(fontSize: 24, color: Colors.white70)),
         SizedBox(width: 8),
         Text(
           "Hendri",

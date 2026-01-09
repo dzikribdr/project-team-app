@@ -25,7 +25,7 @@ class DetailVibraScreen extends StatelessWidget {
                   color: mainPink,
                   shape: BoxShape.circle,
                   image: DecorationImage(
-                    image: AssetImage("assets/images/imagevibra.png"),
+                    image: AssetImage("assets/images/vibra.jpeg"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -80,10 +80,7 @@ class DetailVibraScreen extends StatelessWidget {
                         Text(
                           'Mahasiswa semester 5\nJurusan Software Engineering',
                           textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontSize: 14,
-                            color: mainPink,
-                          ),
+                          style: TextStyle(fontSize: 14, color: mainPink),
                         ),
                       ],
                     ),
