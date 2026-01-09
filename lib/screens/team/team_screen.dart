@@ -49,10 +49,10 @@ class TeamScreen extends StatelessWidget {
               trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white54),
               onTap: () {
                 switch (members[index]) {
-                  case 'Beryl Rafly Agatha':
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const DetailBerylScreen()));
-                    break;
+                  // case 'Beryl Rafly Agatha':
+                    // Navigator.push(context,
+                        // MaterialPageRoute(builder: (_) => const DetailBerylScreen()));
+                  //  break;
                   case 'Dandi Taufiqurrahman':
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => const DetailDandiScreen()));
@@ -61,14 +61,14 @@ class TeamScreen extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (_) => const DetailDzikriScreen()));
                     break;
-                  case 'Evan Alfeus Hendrik':
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const DetailEvanScreen()));
-                    break;
-                  case 'Vibra Ayu Kharisma':
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (_) => const DetailVibraScreen()));
-                    break;
+                  //case 'Evan Alfeus Hendrik':
+                  //  Navigator.push(context,
+                  //      MaterialPageRoute(builder: (_) => const DetailEvanScreen()));
+                  //  break;
+                  //case 'Vibra Ayu Kharisma':
+                  //  Navigator.push(context,
+                  //      MaterialPageRoute(builder: (_) => const DetailVibraScreen()));
+                  //  break;
                 }
               },
             ),
