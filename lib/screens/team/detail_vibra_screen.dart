@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:project_jasun/screens/splash/splash_screen_4.dart'; // Sambung ke Splash 4
 
-class SplashScreen3 extends StatelessWidget {
-  const SplashScreen3({super.key});
+class DetailVibraScreen extends StatelessWidget {
+  const DetailVibraScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // Definisi warna agar konsisten
     const mainPink = Color.fromARGB(255, 250, 184, 179);
     const textPink = Color.fromARGB(255, 228, 173, 191);
 
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 117, 184, 239),
       body: Center(
-        child: SingleChildScrollView( // Tambah Scroll biar aman di layar kecil
+        child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 50),
-              
-              // --- FOTO ---
+
+              // FOTO
               Container(
                 height: 200,
                 width: 200,
@@ -32,34 +30,42 @@ class SplashScreen3 extends StatelessWidget {
                   ),
                 ),
               ),
-              
+
               const SizedBox(height: 30),
 
-              // --- CARD (Hawoo s/d Engineering) ---
+              // CARD PROFILE
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24), // Jarak kanan kiri kartu
+                padding: const EdgeInsets.symmetric(horizontal: 24),
                 child: Card(
-                  elevation: 5, // Ketebalan bayangan
-                  shadowColor: mainPink.withOpacity(0.5), // Bayangan warna pink pudar
+                  elevation: 5,
+                  shadowColor: mainPink.withOpacity(0.5),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20), // Sudut tumpul
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   color: Colors.white,
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 16), // Jarak dalam kartu
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 20,
+                      horizontal: 16,
+                    ),
                     child: Column(
                       children: const [
                         Text(
                           'hawooo gaisss >_<',
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                            fontSize: 30, // Ukuran disesuaikan agar pas di card
+                            fontSize: 30,
                             fontWeight: FontWeight.bold,
                             color: textPink,
                           ),
                         ),
                         SizedBox(height: 10),
-                        Divider(color: mainPink, thickness: 1, indent: 20, endIndent: 20), // Garis pemisah manis
+                        Divider(
+                          color: mainPink,
+                          thickness: 1,
+                          indent: 20,
+                          endIndent: 20,
+                        ),
                         SizedBox(height: 10),
                         Text(
                           'Vibra Ayu Karisma\n1123150115',
@@ -85,11 +91,9 @@ class SplashScreen3 extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 30),
-
               const SizedBox(height: 50),
 
-              // --- TOMBOL CONTINUE ---
+              // TOMBOL BACK
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 40),
                 child: SizedBox(
@@ -103,21 +107,19 @@ class SplashScreen3 extends StatelessWidget {
                       ),
                       elevation: 3,
                     ),
-                    onPressed: () {
-  Navigator.pop(context);
-},
-child: const Text(
-  'Back',
-  style: TextStyle(
-    color: Colors.white,
-    fontWeight: FontWeight.bold,
-    fontSize: 16,
-  ),
-),
-
+                    onPressed: () => Navigator.pop(context),
+                    child: const Text(
+                      'Back',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
                   ),
                 ),
               ),
+
               const SizedBox(height: 50),
             ],
           ),
