@@ -76,14 +76,22 @@ class TeamScreen extends StatelessWidget {
                       ),
                     );
                     break;
-                  //case 'Evan Alfeus Hendrik':
-                  //  Navigator.push(context,
-                  //      MaterialPageRoute(builder: (_) => const DetailEvanScreen()));
-                  //  break;
-                  //case 'Vibra Ayu Kharisma':
-                  //  Navigator.push(context,
-                  //      MaterialPageRoute(builder: (_) => const DetailVibraScreen()));
-                  //  break;
+                  case 'Evan Alfeus Hendrik':
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const DetailEvanScreen(),
+                      ),
+                    );
+                    break;
+                  case 'Vibra Ayu Kharisma':
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => const DetailVibraScreen(),
+                      ),
+                    );
+                    break;
                 }
               },
             ),
