@@ -160,17 +160,19 @@ class _SplashScreen4State extends State<SplashScreen4> {
                       width: double.infinity,
                       height: 50,
                       child: ElevatedButton(
-                        onPressed:
-                            _navigateToNext, // Panggil fungsi navigasi ke Splash 5
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.cyan,
-                          foregroundColor: Colors.black,
-                        ),
-                        child: const Text(
-                          'Gasken Continue',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
+  onPressed: () {
+    Navigator.pop(context);
+  },
+  style: ElevatedButton.styleFrom(
+    backgroundColor: Colors.cyan,
+    foregroundColor: Colors.black,
+  ),
+  child: const Text(
+    'Back',
+    style: TextStyle(fontWeight: FontWeight.bold),
+  ),
+),
+
                     ),
                   ),
                 ],
