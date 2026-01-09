@@ -104,19 +104,17 @@ class SplashScreen3 extends StatelessWidget {
                       elevation: 3,
                     ),
                     onPressed: () {
-                      Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(builder: (context) => const SplashScreen4()),
-                      );
-                    },
-                    child: const Text(
-                      'Continue',
-                      style: TextStyle(
-                        color: Colors.white, 
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                      ),
-                    ),
+  Navigator.pop(context);
+},
+child: const Text(
+  'Back',
+  style: TextStyle(
+    color: Colors.white,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+  ),
+),
+
                   ),
                 ),
               ),
