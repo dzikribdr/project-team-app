@@ -9,3 +9,34 @@
   FAKULTAS TEKNOLOGI INFORMASI & KOMUNIKASI<br>
   <a href="https://global.ac.id/">https://global.ac.id/</a>
 </div>
+
+---
+
+## 📌 Project UAS
+- **Mata Kuliah** : Aplikasi Mobile
+- **Kelas** : KS1234
+- **Semester** : GANJIL
+- **Tahun Akademik** : 2025 - 2026
+- **Kelompok** : JaSunCin
+
+<br>
+
+## 📖 About The Project
+
+**[Nama Aplikasi Anda]** adalah aplikasi mobile modern yang dikembangkan oleh Kelompok JaSunCin menggunakan Flutter. Aplikasi ini dirancang untuk membantu pengguna dalam **[jelaskan fungsi utama aplikasi, misal: memanajemen tugas harian / memesan tiket / dll]**.
+
+Dengan antarmuka yang intuitif dan dukungan teknologi cloud, aplikasi ini bertujuan untuk **[sebutkan tujuan utama, misal: meningkatkan produktivitas tim]** secara efisien dan *real-time*.
+
+### Key Features
+Aplikasi ini dilengkapi dengan berbagai fitur unggulan, antara lain:
+
+- **🔐 Secure Authentication** - Sistem login dan register aman menggunakan Firebase Auth.
+- **🎨 Modern UI/UX** - Desain antarmuka yang bersih, responsif, dan *user-friendly*.
+- **☁️ Cloud Sync** - Sinkronisasi data otomatis dan *real-time* dengan Firebase Firestore.
+- **🔔 Push Notifications** - Notifikasi pintar untuk **[sebutkan fungsi notifikasi]**.
+- **📱 Responsive Layout** - Tampilan yang optimal di berbagai ukuran layar perangkat.
+- **[Fitur Khusus 1]** - [Penjelasan singkat fitur khusus aplikasi Anda].
+- **[Fitur Khusus 2]** - [Penjelasan singkat fitur khusus aplikasi Anda].
+
+<br>
+
