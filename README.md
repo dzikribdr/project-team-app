@@ -95,3 +95,9 @@ Pastikan Anda telah menginstal:
 ```bash
 flutter pub get
 ```
+3. Setup Firebase
+```bash
+# Download google-services.json dari Firebase Console
+# Place in android/app/
+cp path/to/google-services.json android/app/
+```
