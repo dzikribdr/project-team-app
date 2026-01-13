@@ -40,3 +40,13 @@ Aplikasi ini dilengkapi dengan berbagai fitur unggulan, antara lain:
 
 <br>
 
+## 📸 Screenshots
+
+<div align="center">
+  <img src="screenshots/splash_screen.png" alt="Splash Screen" width="200" style="margin: 5px;"/>
+  <img src="screenshots/login_screen.png" alt="Login" width="200" style="margin: 5px;"/>
+  <img src="screenshots/home_screen.png" alt="Home" width="200" style="margin: 5px;"/>
+  <img src="screenshots/profile_screen.png" alt="Profile" width="200" style="margin: 5px;"/>
+</div>
+
+<br>
