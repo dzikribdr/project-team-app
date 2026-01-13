@@ -147,5 +147,13 @@ CREATE TABLE notes (
   is_synced INTEGER DEFAULT 0
 );
 
+## 📝 API Documentation
+
+### Authentication Endpoints
+
+- `POST /api/auth/register` - Register user baru
+- `POST /api/auth/login` - Login user
+- `POST /api/auth/logout` - Logout user
+
 
 
