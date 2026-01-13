@@ -155,5 +155,49 @@ CREATE TABLE notes (
 - `POST /api/auth/login` - Login user
 - `POST /api/auth/logout` - Logout user
 
+Development Workflow
+Tim kami menerapkan alur kerja Git berikut untuk kolaborasi yang efisien:
+
+1. Fork & Clone repository utama.
+
+2. Create Branch untuk fitur baru: git checkout -b feature/NamaFitur
+
+3. Commit perubahan secara berkala: git commit -m "Add: Implementasi fitur login"
+
+4. Push ke repository: git push origin feature/NamaFitur
+
+5. Pull Request untuk direview oleh tim sebelum di-merge ke branch utama.
 
 
+
+## 👥 Team Members (Kelompok JaSunCin)
+
+Tim pengembang dibagi berdasarkan spesialisasi fitur (Feature Branch) untuk memaksimalkan efisiensi alur kerja Git:
+
+| No | Nama Anggota | Role & Tanggung Jawab | Branch / Fokus Fitur | Akun GitHub |
+|:--:|:-------------|:----------------------|:---------------------|:------------|
+| 1 | **Dzikri** | **Project Lead & Backend**<br>Mengatur struktur project, integrasi Firebase, dan manajemen repository. | `main`<br>`feature/backend-init` | [@dzikribdr](https://github.com/dzikribdr) |
+| 2 | **Dandi** | **UI/UX Designer & Frontend**<br>Merancang antarmuka aplikasi, aset grafis, dan implementasi tema. | `feature/ui-design`<br>`feature/dark-mode` | [@danditfq](https://github.com/danditfq) |
+| 3 | **Beryl** | **Frontend Developer (Auth)**<br>Menangani halaman Login, Register, dan logika validasi user. | `feature/authentication`<br>`feature/splash-screen` | [@beryl](https://github.com/beryl) |
+| 4 | **Evan** | **Mobile Developer (Core)**<br>Mengembangkan fitur utama CRUD dan sinkronisasi data (Cloud/Local). | `feature/home-dashboard`<br>`feature/crud-logic` | [@evan](https://github.com/evan) |
+| 5 | **Vibra** | **QA & Feature Dev**<br>Menangani fitur profil, settings, testing, dan perbaikan bug. | `feature/profile-settings`<br>`fix/bug-fixes` | [@vibra](https://github.com/vibra) |
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Acknowledgments
+
+- [Flutter Community](https://flutter.dev/community) - For amazing packages
+- [Firebase](https://firebase.google.com/) - For backend services
+- [Flaticon](https://www.flaticon.com/) - For app icons
+- [Unsplash](https://unsplash.com/) - For placeholder images
+    
+
+---
+
+<div align="center">
+  <p>Made with by .... Team</p>
+  <p>© 2026 Notes App. All rights reserved.</p>
+</div>
