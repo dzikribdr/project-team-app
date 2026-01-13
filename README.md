@@ -60,3 +60,14 @@ Lihat demonstrasi fitur lengkap aplikasi kami melalui tautan berikut:
 
 <br>
 
+## 🛠️ Built With
+
+Teknologi dan *tools* yang digunakan dalam pengembangan aplikasi ini:
+
+- **[Flutter](https://flutter.dev/)** (v3.x) - Framework UI utama.
+- **[Dart](https://dart.dev/)** - Bahasa pemrograman.
+- **[Firebase](https://firebase.google.com/)** - Backend as a Service (Auth, Firestore, Storage).
+- **[Provider / Bloc / GetX]** - State Management (Sesuaikan dengan yang dipakai).
+- **[Android Studio / VS Code]** - IDE Pengembangan.
+
+<br>
