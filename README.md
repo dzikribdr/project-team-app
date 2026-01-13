@@ -71,3 +71,14 @@ Teknologi dan *tools* yang digunakan dalam pengembangan aplikasi ini:
 - **[Android Studio / VS Code]** - IDE Pengembangan.
 
 <br>
+
+## 🚀 Getting Started
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal Anda.
+
+### Prerequisites
+Pastikan Anda telah menginstal:
+- Flutter SDK (Versi 3.0 atau lebih baru)
+- Dart SDK
+- Android Studio / VS Code dengan ekstensi Flutter
+- Git
