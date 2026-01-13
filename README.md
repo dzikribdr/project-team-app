@@ -82,3 +82,11 @@ Pastikan Anda telah menginstal:
 - Dart SDK
 - Android Studio / VS Code dengan ekstensi Flutter
 - Git
+
+### Installation
+
+1. **Clone Repository**
+   Salin repository ini ke direktori lokal Anda:
+   ```bash
+   git clone [https://github.com/dzikribdr/project-team-app.git](https://github.com/dzikribdr/project-team-app.git)
+   cd project-team-app
