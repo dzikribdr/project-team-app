@@ -90,3 +90,8 @@ Pastikan Anda telah menginstal:
    ```bash
    git clone [https://github.com/dzikribdr/project-team-app.git](https://github.com/dzikribdr/project-team-app.git)
    cd project-team-app
+
+2. Install dependencies
+```bash
+flutter pub get
+```
