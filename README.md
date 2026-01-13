@@ -101,3 +101,7 @@ flutter pub get
 # Place in android/app/
 cp path/to/google-services.json android/app/
 ```
+4. Run aplikasi
+```bash
+flutter run
+```
