@@ -105,3 +105,16 @@ cp path/to/google-services.json android/app/
 ```bash
 flutter run
 ```
+
+lib/
+├── app/
+│   ├── modules/         # Modul fitur (Home, Auth, dll)
+│   ├── routes/          # Navigasi & Routing
+│   └── themes/          # Konfigurasi Tema & Warna
+├── data/
+│   ├── models/          # Model data (JSON serializable)
+│   ├── providers/       # Data providers / API calls
+│   └── services/        # Service logic (Firebase, Local Storage)
+├── widgets/             # Widget global yang dapat digunakan kembali
+├── utils/               # Fungsi bantuan & Konstanta
+└── main.dart            # Entry point aplikasi
