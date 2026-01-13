@@ -118,3 +118,15 @@ lib/
 ├── widgets/             # Widget global yang dapat digunakan kembali
 ├── utils/               # Fungsi bantuan & Konstanta
 └── main.dart            # Entry point aplikasi
+
+## Authentication Flow
+
+```
+1. Splash Screen (Auto-login check)
+   ↓
+2. Login Screen / Register Screen
+   ↓
+3. Home Screen (Dashboard)
+   ↓
+4. Profile & Settings
+```
