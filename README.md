@@ -106,6 +106,8 @@ cp path/to/google-services.json android/app/
 flutter run
 ```
 
+## 📁 Project Structure
+
 lib/
 ├── app/
 │   ├── modules/         # Modul fitur (Home, Auth, dll)
@@ -130,3 +132,20 @@ lib/
    ↓
 4. Profile & Settings
 ```
+## 🗄️ Database Schema
+
+### Notes Table
+
+CREATE TABLE notes (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  title TEXT NOT NULL,
+  content TEXT,
+  category_id TEXT,
+  created_at INTEGER,
+  updated_at INTEGER,
+  is_synced INTEGER DEFAULT 0
+);
+
+
+
