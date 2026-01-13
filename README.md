@@ -50,3 +50,13 @@ Aplikasi ini dilengkapi dengan berbagai fitur unggulan, antara lain:
 </div>
 
 <br>
+
+## 🎥 Demo Video
+
+Lihat demonstrasi fitur lengkap aplikasi kami melalui tautan berikut:
+
+- **[📺 Tonton Demo di YouTube](https://youtube.com/watch?v=XXXXXXXX)**
+- **[📂 Alternatif: Google Drive](https://drive.google.com/file/d/XXXXXXXX/view)**
+
+<br>
+
