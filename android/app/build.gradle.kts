@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.project_jasun"
+    namespace = "com.example.project_jasun2"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -23,7 +23,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.project_jasun"
+        applicationId = "com.example.project_jasun2"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
