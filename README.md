@@ -23,9 +23,9 @@
 
 ## 📖 About The Project
 
-**[Nama Aplikasi Anda]** adalah aplikasi mobile modern yang dikembangkan oleh Kelompok JaSunCin menggunakan Flutter. Aplikasi ini dirancang untuk membantu pengguna dalam **[jelaskan fungsi utama aplikasi, misal: memanajemen tugas harian / memesan tiket / dll]**.
+**[Vapestore]** adalah aplikasi mobile modern yang dikembangkan oleh Kelompok JaSunCin menggunakan Flutter. Aplikasi ini dirancang untuk membantu pengguna dalam **[memudahkan pembelian vape]**.
 
-Dengan antarmuka yang intuitif dan dukungan teknologi cloud, aplikasi ini bertujuan untuk **[sebutkan tujuan utama, misal: meningkatkan produktivitas tim]** secara efisien dan *real-time*.
+Dengan antarmuka yang intuitif dan dukungan teknologi cloud, aplikasi ini bertujuan untuk **[memudahkan pembelian vape]** secara efisien dan *real-time*.
 
 ### Key Features
 Aplikasi ini dilengkapi dengan berbagai fitur unggulan, antara lain:
@@ -43,10 +43,10 @@ Aplikasi ini dilengkapi dengan berbagai fitur unggulan, antara lain:
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="screenshots/splash_screen.png" alt="Splash Screen" width="200" style="margin: 5px;"/>
-  <img src="screenshots/login_screen.png" alt="Login" width="200" style="margin: 5px;"/>
-  <img src="screenshots/home_screen.png" alt="Home" width="200" style="margin: 5px;"/>
-  <img src="screenshots/profile_screen.png" alt="Profile" width="200" style="margin: 5px;"/>
+ image: AssetImage("assets/images/splash_screen.png")
+ image: AssetImage("assets/images/login.png")
+ image: AssetImage("assets/images/home.png")
+ image: AssetImage("assets/images/profile.png")
 </div>
 
 <br>
@@ -55,8 +55,8 @@ Aplikasi ini dilengkapi dengan berbagai fitur unggulan, antara lain:
 
 Lihat demonstrasi fitur lengkap aplikasi kami melalui tautan berikut:
 
-- **[📺 Tonton Demo di YouTube](https://youtube.com/watch?v=XXXXXXXX)**
-- **[📂 Alternatif: Google Drive](https://drive.google.com/file/d/XXXXXXXX/view)**
+- **[📺 Tonton Demo di instagram](https://www.instagram.com/reel/DTfmYIIgXw-/?igsh=M2xwbjMwcnUyandx)**
+
 
 <br>
 
@@ -147,6 +147,8 @@ CREATE TABLE notes (
   is_synced INTEGER DEFAULT 0
 );
 
+
+
 ## 📝 API Documentation
 
 ### Authentication Endpoints
@@ -169,6 +171,9 @@ Tim kami menerapkan alur kerja Git berikut untuk kolaborasi yang efisien:
 5. Pull Request untuk direview oleh tim sebelum di-merge ke branch utama.
 
 
+## stucture pengerjaan 
+
+image: AssetImage("assets/images/vapestorel.drawio.png")
 
 ## 👥 Team Members (Kelompok JaSunCin)
 
