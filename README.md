@@ -1,11 +1,14 @@
-# project-team-app
+# Project Team App - Flutter Application
 
-Kelompok JaSunCin :
-1. Beryl
-2. Dandi
-3. Dzikri
-4. Evan gans
-5. Vibra
+<div align="center">
+  <img src="https://lms.global.ac.id/lms/pluginfile.php/1/theme_klass/footerlogo/1745232397/logo-global-institute-stroke.png" alt="Institut Teknologi dan Bisnis Bina Sarana Global" width="200"/>
+</div>
+
+<div align="center">
+  <b>Institut Teknologi dan Bisnis Bina Sarana Global</b><br>
+  FAKULTAS TEKNOLOGI INFORMASI & KOMUNIKASI<br>
+  <a href="https://global.ac.id/">https://global.ac.id/</a>
+</div>
 
 Note :
 <img width="268" height="580" alt="Screenshot 2026-01-15 115900" src="https://github.com/user-attachments/assets/7beae972-deae-4866-8754-ffccec50327d" />
@@ -15,3 +18,201 @@ Note :
 <img width="257" height="77" alt="Screenshot 2026-01-15 115707" src="https://github.com/user-attachments/assets/0808c71f-b078-4326-99fb-ba38133468a9" />
 <img width="281" height="588" alt="Screenshot 2026-01-15 115728" src="https://github.com/user-attachments/assets/d6a73be7-7620-43e4-a4be-e019a7ceb081" />
 
+---
+
+## 📌 Project UAS
+- **Mata Kuliah** : Aplikasi Mobile
+- **Kelas** : KS1234
+- **Semester** : GANJIL
+- **Tahun Akademik** : 2025 - 2026
+- **Kelompok** : JaSunCin
+
+<br>
+
+## 📖 About The Project
+
+**[Vapestore]** adalah aplikasi mobile modern yang dikembangkan oleh Kelompok JaSunCin menggunakan Flutter. Aplikasi ini dirancang untuk membantu pengguna dalam **[memudahkan pembelian vape]**.
+
+Dengan antarmuka yang intuitif dan dukungan teknologi cloud, aplikasi ini bertujuan untuk **[memudahkan pembelian vape]** secara efisien dan *real-time*.
+
+### Key Features
+Aplikasi ini dilengkapi dengan berbagai fitur unggulan, antara lain:
+
+- **🔐 Secure Authentication** - Sistem login dan register aman menggunakan Firebase Auth.
+- **🎨 Modern UI/UX** - Desain antarmuka yang bersih, responsif, dan *user-friendly*.
+- **☁️ Cloud Sync** - Sinkronisasi data otomatis dan *real-time* dengan Firebase Firestore.
+- **🔔 Push Notifications** - Notifikasi pintar untuk **[sebutkan fungsi notifikasi]**.
+- **📱 Responsive Layout** - Tampilan yang optimal di berbagai ukuran layar perangkat.
+- **[Fitur Khusus 1]** - [Penjelasan singkat fitur khusus aplikasi Anda].
+- **[Fitur Khusus 2]** - [Penjelasan singkat fitur khusus aplikasi Anda].
+
+<br>
+
+## 📸 Screenshots
+
+<div align="center">
+ image: AssetImage("assets/images/splash_screen.png")
+ image: AssetImage("assets/images/login.png")
+ image: AssetImage("assets/images/home.png")
+ image: AssetImage("assets/images/profile.png")
+</div>
+
+<br>
+
+## 🎥 Demo Video
+
+Lihat demonstrasi fitur lengkap aplikasi kami melalui tautan berikut:
+
+- **[📺 Tonton Demo di instagram](https://www.instagram.com/reel/DTfmYIIgXw-/?igsh=M2xwbjMwcnUyandx)**
+
+
+<br>
+
+## 🛠️ Built With
+
+Teknologi dan *tools* yang digunakan dalam pengembangan aplikasi ini:
+
+- **[Flutter](https://flutter.dev/)** (v3.x) - Framework UI utama.
+- **[Dart](https://dart.dev/)** - Bahasa pemrograman.
+- **[Firebase](https://firebase.google.com/)** - Backend as a Service (Auth, Firestore, Storage).
+- **[Provider / Bloc / GetX]** - State Management (Sesuaikan dengan yang dipakai).
+- **[Android Studio / VS Code]** - IDE Pengembangan.
+
+<br>
+
+## 🚀 Getting Started
+
+Ikuti langkah-langkah berikut untuk menjalankan proyek ini di komputer lokal Anda.
+
+### Prerequisites
+Pastikan Anda telah menginstal:
+- Flutter SDK (Versi 3.0 atau lebih baru)
+- Dart SDK
+- Android Studio / VS Code dengan ekstensi Flutter
+- Git
+
+### Installation
+
+1. **Clone Repository**
+   Salin repository ini ke direktori lokal Anda:
+   ```bash
+   git clone [https://github.com/dzikribdr/project-team-app.git](https://github.com/dzikribdr/project-team-app.git)
+   cd project-team-app
+
+2. Install dependencies
+```bash
+flutter pub get
+```
+3. Setup Firebase
+```bash
+# Download google-services.json dari Firebase Console
+# Place in android/app/
+cp path/to/google-services.json android/app/
+```
+4. Run aplikasi
+```bash
+flutter run
+```
+
+## 📁 Project Structure
+
+lib/
+├── app/
+│   ├── modules/         # Modul fitur (Home, Auth, dll)
+│   ├── routes/          # Navigasi & Routing
+│   └── themes/          # Konfigurasi Tema & Warna
+├── data/
+│   ├── models/          # Model data (JSON serializable)
+│   ├── providers/       # Data providers / API calls
+│   └── services/        # Service logic (Firebase, Local Storage)
+├── widgets/             # Widget global yang dapat digunakan kembali
+├── utils/               # Fungsi bantuan & Konstanta
+└── main.dart            # Entry point aplikasi
+
+## Authentication Flow
+
+```
+1. Splash Screen (Auto-login check)
+   ↓
+2. Login Screen / Register Screen
+   ↓
+3. Home Screen (Dashboard)
+   ↓
+4. Profile & Settings
+```
+## 🗄️ Database Schema
+
+### Notes Table
+
+CREATE TABLE notes (
+  id TEXT PRIMARY KEY,
+  user_id TEXT NOT NULL,
+  title TEXT NOT NULL,
+  content TEXT,
+  category_id TEXT,
+  created_at INTEGER,
+  updated_at INTEGER,
+  is_synced INTEGER DEFAULT 0
+);
+
+## link aplikasinya
+https://drive.google.com/drive/folders/19Qj9a5381KEfppRTyU0tDdJwuF0La7NX?usp=sharing
+
+
+## 📝 API Documentation
+
+### Authentication Endpoints
+
+- `POST /api/auth/register` - Register user baru
+- `POST /api/auth/login` - Login user
+- `POST /api/auth/logout` - Logout user
+
+Development Workflow
+Tim kami menerapkan alur kerja Git berikut untuk kolaborasi yang efisien:
+
+1. Fork & Clone repository utama.
+
+2. Create Branch untuk fitur baru: git checkout -b feature/NamaFitur
+
+3. Commit perubahan secara berkala: git commit -m "Add: Implementasi fitur login"
+
+4. Push ke repository: git push origin feature/NamaFitur
+
+5. Pull Request untuk direview oleh tim sebelum di-merge ke branch utama.
+
+
+## stucture pengerjaan 
+
+image: AssetImage("assets/images/vapestorel.drawio.png")
+
+## 👥 Team Members (Kelompok JaSunCin)
+
+Tim pengembang dibagi berdasarkan spesialisasi fitur (Feature Branch) untuk memaksimalkan efisiensi alur kerja Git:
+
+| No | Nama Anggota | Role & Tanggung Jawab | Branch / Fokus Fitur | Akun GitHub |
+|:--:|:-------------|:----------------------|:---------------------|:------------|
+| 1 | **Dzikri** | **Project Lead & Backend**<br>Mengatur struktur project, integrasi Firebase, dan manajemen repository. | `main`<br>`feature/backend-init` | [@dzikribdr](https://github.com/dzikribdr) |
+| 2 | **Dandi** | **UI/UX Designer & Frontend**<br>Merancang antarmuka aplikasi, aset grafis, dan implementasi tema. | `feature/ui-design`<br>`feature/dark-mode` | [@danditfq](https://github.com/danditfq) |
+| 3 | **Beryl** | **Frontend Developer (Auth)**<br>Menangani halaman Login, Register, dan logika validasi user. | `feature/authentication`<br>`feature/splash-screen` | [@beryl](https://github.com/beryl) |
+| 4 | **Evan** | **Mobile Developer (Core)**<br>Mengembangkan fitur utama CRUD dan sinkronisasi data (Cloud/Local). | `feature/home-dashboard`<br>`feature/crud-logic` | [@evan](https://github.com/evan) |
+| 5 | **Vibra** | **QA & Feature Dev**<br>Menangani fitur profil, settings, testing, dan perbaikan bug. | `feature/profile-settings`<br>`fix/bug-fixes` | [@vibra](https://github.com/vibra) |
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Acknowledgments
+
+- [Flutter Community](https://flutter.dev/community) - For amazing packages
+- [Firebase](https://firebase.google.com/) - For backend services
+- [Flaticon](https://www.flaticon.com/) - For app icons
+- [Unsplash](https://unsplash.com/) - For placeholder images
+    
+
+---
+
+<div align="center">
+  <p>Made with by .... Team</p>
+  <p>© 2026 Notes App. All rights reserved.</p>
+</div>
